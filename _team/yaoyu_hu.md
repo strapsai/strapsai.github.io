@@ -6,7 +6,7 @@ jobtitle: "Senior Project Scientist"
 affiliation: "AirLab, Carnegie Mellon University"
 linkedinurl: "https://www.linkedin.com/"
 promoted: false
-weight: yaoyu_hu
+weight: "yaoyu_hu"
 ---
 
 Yaoyu Hu works at the [AirLab](https://theairlag.org), Carnegie Mellon University. He's main focus is on the development of the triage sensor payload and robot platform.
