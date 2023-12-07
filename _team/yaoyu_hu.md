@@ -5,6 +5,7 @@ image: "images/team/yaoyu_hu_640x640.jpg"
 jobtitle: "Senior Project Scientist"
 affiliation: "AirLab, Carnegie Mellon University"
 linkedinurl: "https://www.linkedin.com/"
+promoted: false
 weight: yaoyu_hu
 ---
 

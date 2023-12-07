@@ -5,6 +5,7 @@ image: "images/team/dhruv_srikanth_640x640.jpg"
 jobtitle: "Research Engineer/Programmer"
 affiliation: "Auton Lab, Carnegie Mellon University"
 linkedinurl: "https://www.linkedin.com/"
+promoted: false
 weight: dhruv_srikanth
 ---
 
