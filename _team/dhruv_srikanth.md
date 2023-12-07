@@ -6,7 +6,7 @@ jobtitle: "Research Engineer/Programmer"
 affiliation: "Auton Lab, Carnegie Mellon University"
 linkedinurl: "https://www.linkedin.com/"
 promoted: false
-weight: dhruv_srikanth
+weight: "dhruv_srikanth"
 ---
 
 Dhruv Srikanth works at the Auton Lab, Carnegie Mellon University.
