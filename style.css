@@ -7,24 +7,75 @@ html, body{
     scroll-behavior:smooth;
 }
 
-.content{
+.content_old{
     height:max-content;
     min-height:600px;
     width:100vw;
-    margin:0;
+    /* margin:0; */
     position:static;
     left:0;
     background-size:cover;
     background-position-x:center;
     background-attachment:fixed;
     float:left;
+    /* align-items: center; */
+    margin: auto;
 }
-
+.content {
+    display: flex; /* Establishes a flex container */
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: center; /* Centers children along the main axis (vertically, in this case) */
+    align-items: center; /* Centers children along the cross axis (horizontally, in this case) */
+    height: 100vh; /* Ensures the container takes up at least the full viewport height */
+    width: 100vw; /* Takes up 100% of the viewport width */
+    background-size: cover; /* Cover the background */
+    background-position: center center; /* Center the background */
+    background-attachment: fixed; /* Fixed background */
+    position: relative; /* Allows for absolute positioning of children relative to this container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
+}
 .inner_content{
-    width:500px;
+    width:50%;
     padding:50px;
     float:left;
     position:relative;
+    /* text-shadow: 2px 2px 4px rgba(202, 32, 32, 0.7); */
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust the opacity as needed */
+    padding: 20px;
+    border-radius: 5px;
+    /* text-align: center; */
+}
+
+.inner_content_join{
+    width:75%;
+    padding:50px;
+    float:left;
+    position:relative;
+    /* text-shadow: 2px 2px 4px rgba(202, 32, 32, 0.7); */
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust the opacity as needed */
+    padding: 20px;
+    border-radius: 5px;
+    /* text-align: center; */
+}
+
+.sponsor_benefits {
+    text-align: left; /* Aligns text to the left */
+    font-size: 1.3rem; /* Sets a default font size */
+    line-height: 1.6; /* Sets the height between lines of text */
+    color: #eeeeee; /* Sets the text color to a dark grey for readability */
+    position:relative;
+    /* text-shadow: 2px 2px 4px rgba(202, 32, 32, 0.7); */
+}
+
+.inner_content_old {
+    /* Add the necessary padding and styling */
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding is included in width/height calculations */
+    text-align: center; /* Centers text within this element */
+    max-width: 600px; /* Or whatever maximum width you want */
+    width: 100%; /* Makes the width responsive to the size of its container */
+    color: white; /* Text color */
+    /* Remove float, margin, position, and left properties */
 }
 
 .inner_content a, a:link, a:visited{
@@ -77,7 +128,7 @@ html, body{
     float:left;
 }
 
-.team_box{
+/* .team_box{
     width:200px;
     height:300px;
     background-color:#148f;
@@ -91,7 +142,25 @@ html, body{
     border:solid 1px #fff;
     z-index:1;
     text-align:center;
+} */
+
+
+.team_box {
+    width: calc(25% - 40px); /* 25% of the parent container width minus margins */
+    height: 30vh; /* 30% of the viewport height */
+    background-color: #148f; /* Background color */
+    float: left; /* Element will float to the left */
+    position: relative; /* Positioning context for absolute positioned child elements */
+    z-index: 1; /* Stacking order */
+    padding: 20px; /* Padding inside the box */
+    margin: 20px; /* Margin outside the box, this affects the calc() for width */
+    border: solid 1px #fff; /* White border */
+    text-align: center; /* Center aligns text horizontally */
+    box-sizing: border-box; /* Makes sure padding and border are included in the width and height */
+    overflow: hidden; /* Prevents content from spilling out */
+    flex: 0 0 calc(25% - 40px); 
 }
+
 
 .team_photo{
     width:100px;
@@ -148,6 +217,11 @@ html, body{
 }
 
 #contact{
+    background-image:url("asclepius.png");
+    text-align:center;
+}
+
+#join{
     background-image:url("asclepius.png");
     text-align:center;
 }
@@ -222,13 +296,23 @@ html, body{
     cursor:pointer;
 }
 
-#team_container{
+/* #team_container{
     width:80vw;
     min-height:200px;
     position:relative;
     left:10vw;
     float:left;
+} */
+#team_container {
+    display: flex; /* Enables Flexbox layout, which provides an easier way to align and distribute space among items within a container */
+    flex-wrap: wrap; /* Allows flex items to wrap onto multiple lines */
+    justify-content: center; /* Centers the items along the main axis */
+    align-items: flex-start; /* Aligns items to the start of the cross axis */
+    width: 80vw; /* Sets the width of the container to 80% of the viewport width */
+    min-height: 200px; /* Sets a minimum height for the container */
+    margin: 0 auto; /* Centers the container in the viewport */
 }
+
 
 @media (max-width:750px){
     #top_links{
