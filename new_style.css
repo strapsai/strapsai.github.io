@@ -407,3 +407,51 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     padding:10px;
     transition-duration:0.1s;
 }
+
+/* Style for sponsor logos section */
+.logo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Large logos */
+.logo-large {
+  height: 100px;  /* Adjust the size of large logos */
+  width: auto;
+}
+
+/* Medium logos */
+.logo-medium {
+  height: 70px;  /* Adjust the size of medium logos */
+  width: auto;
+}
+
+/* Medium logos */
+.logo-medium_1 {
+  height: 80px;  /* Adjust the size of medium logos */
+  width: auto;
+}
+
+/* Small logos */
+.logo-small {
+  height: 50px;  /* Adjust the size of small logos */
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .logo-large {
+    height: 100px;  /* Adjust for mobile view */
+  }
+  .logo-medium {
+    height: 70px;   /* Adjust for mobile view */
+  }
+  .logo-medium_1 {
+    height: 70px;   /* Adjust for mobile view */
+  }
+  .logo-small {
+    height: 50px;   /* Adjust for mobile view */
+  }
+}
