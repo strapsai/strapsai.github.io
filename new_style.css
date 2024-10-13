@@ -408,50 +408,91 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     transition-duration:0.1s;
 }
 
+/* Updating for media responsiveness */
 /* Style for sponsor logos section */
 .logo-row {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: space-evenly;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
+  /* flex-wrap: wrap; */
+  flex-wrap: nowrap;
+  gap: 16px; /* Space between logos */
 }
 
 /* Large logos */
 .logo-large {
-  height: 100px;  /* Adjust the size of large logos */
-  width: auto;
+  max-width: 12%;  /* 20% of the row's width */
+  height: auto;    /* Maintain aspect ratio */
 }
 
 /* Medium logos */
 .logo-medium {
-  height: 70px;  /* Adjust the size of medium logos */
-  width: auto;
+  max-width: 20%;  /* 18% of the row's width */
+  height: auto;    /* Maintain aspect ratio */
 }
-
-/* Medium logos */
-.logo-medium_1 {
-  height: 80px;  /* Adjust the size of medium logos */
-  width: auto;
+.logo-medium-2 {
+  max-width: 22%;  /* 18% of the row's width */
+  height: auto;    /* Maintain aspect ratio */
+}
+.logo-medium-second-row {
+  max-width: 15.02%;  /* 15% of the row's width */
+  height: auto;    /* Maintain aspect ratio */
+  object-fit: cover;
+}
+.logo-medium-second-row-2 {
+  max-width: 25.02%;  /* 15% of the row's width */
+  height: auto;    /* Maintain aspect ratio */
 }
 
 /* Small logos */
 .logo-small {
-  height: 50px;  /* Adjust the size of small logos */
-  width: auto;
+  max-width: 6%;  /* 10% of the row's width */
+  height: auto;    /* Maintain aspect ratio */
+}
+/* Small logos */
+.logo-small-2 {
+  max-width: 15%;  /* 10% of the row's width */
+  height: auto;    /* Maintain aspect ratio */
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .logo-large {
-    height: 100px;  /* Adjust for mobile view */
+    max-width: 25%;  /* Make logos larger for smaller screens */
+    height: auto;
   }
   .logo-medium {
-    height: 70px;   /* Adjust for mobile view */
+    max-width: 20%;  /* Adjust size for medium logos */
+    height: auto;
   }
-  .logo-medium_1 {
-    height: 70px;   /* Adjust for mobile view */
+  .logo-medium-second-row {
+    max-width: 18%;  /* Adjust size for medium logos */
+    height: auto;
   }
   .logo-small {
-    height: 50px;   /* Adjust for mobile view */
+    max-width: 10%;  /* Adjust size for small logos */
+    height: auto;
   }
 }
+
+@media (max-width: 480px) {
+  .logo-large {
+    max-width: 30%;  /* Make logos even larger for mobile screens */
+    height: auto;
+  }
+  .logo-medium {
+    max-width: 20%;  /* Adjust size for medium logos */
+    height: auto;
+  }
+  .logo-medium-second-row {
+    max-width: 18%;  /* Adjust size for medium logos */
+    height: auto;
+  }
+  .logo-small {
+    max-width: 10%;  /* Adjust size for small logos */
+    height: auto;
+  }
+}
+
+
