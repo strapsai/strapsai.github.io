@@ -422,39 +422,31 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 /* Large logos */
 .logo-large {
-  max-width: 12%;  /* 20% of the row's width */
+  max-width: 11%;  /* 20% of the row's width */
   height: auto;    /* Maintain aspect ratio */
 }
+
 
 /* Medium logos */
 .logo-medium {
   max-width: 20%;  /* 18% of the row's width */
   height: auto;    /* Maintain aspect ratio */
 }
-.logo-medium-2 {
-  max-width: 22%;  /* 18% of the row's width */
-  height: auto;    /* Maintain aspect ratio */
-}
+
 .logo-medium-second-row {
   max-width: 15.02%;  /* 15% of the row's width */
   height: auto;    /* Maintain aspect ratio */
   object-fit: cover;
 }
-.logo-medium-second-row-2 {
-  max-width: 25.02%;  /* 15% of the row's width */
-  height: auto;    /* Maintain aspect ratio */
-}
+
 
 /* Small logos */
 .logo-small {
   max-width: 6%;  /* 10% of the row's width */
   height: auto;    /* Maintain aspect ratio */
 }
-/* Small logos */
-.logo-small-2 {
-  max-width: 15%;  /* 10% of the row's width */
-  height: auto;    /* Maintain aspect ratio */
-}
+
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -478,7 +470,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 @media (max-width: 480px) {
   .logo-large {
-    max-width: 30%;  /* Make logos even larger for mobile screens */
+    max-width: 25%;  /* Make logos even larger for mobile screens */
     height: auto;
   }
   .logo-medium {
