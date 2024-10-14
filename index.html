@@ -1,152 +1,549 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
 <html>
+  <head>
+    <title>CHIRON AI | Robotic detection & triage of human casualties</title>
+    <link rel="icon" href="chiron-icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="new_style.css">
+    <style>
+    .tick-cell {
+        text-align: center;
+        vertical-align: middle;
+      }
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
-    <head>
-        <title>STRAPS AI | Robotic detection & monitoring of human casualties</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="icon.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
-        
-    </head>
+    .highlight {
+      font-weight: bold;
+      font-size: 1.1em; /* Slightly larger font size */
+      color: #444; /* Darker color for emphasis */
+    }
 
-    <body>
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+    }
+    .navbar-logo {
+    height: 72px; /* Adjust this value based on your navbar height */
+    width: auto;  /* Keeps the aspect ratio */
+}
 
-        <div id="top_bar">
-            <a href="#top"><img id="top_logo" src="logo.png"></a>
-            <div id="top_links">
-                <a href="#solution">Timeline</a>
-                <a href="#team">Team</a>
-                <a href="#contact">Contact</a>
-            </div>
+    /* Full height image header */
+    .bgimg-1 {
+      background-position: center;
+      background-size: cover;
+      /* background-color: rgb(0, 0, 0); */
+      min-height: 100%;
+    }
+    /* Full height image header */
+    .bgimg-2 {
+      background-position: center;
+      background-size: cover;
+      background-image: url("asclepius.png");
+    /* background-color: black; */
+      min-height: 100%;
+    }
+
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+    </style>
+  </head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">
+        <img src="logos/chiron-redwht.png" alt="Your Logo" class="navbar-logo">
+    </a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#timeline" class="w3-bar-item w3-button">Timeline</a>
+      <a href="#team" class="w3-bar-item w3-button"> Team</a>
+      <a href="#contact" class="w3-bar-item w3-button"> Join Us</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="#timeline" onclick="w3_close()" class="w3-bar-item w3-button">Timeline</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">Team</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Join Us</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min w3-black" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Team Chiron</span><br>
+    <span class="w3-xxxlarge w3-hide-small">Making remote autonomous triage a reality</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Team Chiron : Making remote autonomous triage a reality</span><br>
+    <span class="w3-xlarge">Developing robotic systems that assess casualties and monitor vital signs, optimizing first responder deployment.</span>
+    <!-- <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p> -->
+    <br><br>
+    <!-- <div class="logo_container">
+      <a href="https://www.cmu.edu"><img class="sponsor_logo" src="https://www.cmu.edu/brand/brand-guidelines/images/wordmarksquare-red-600x600.png" target="_blank"></a>
+      <a href="https://www.pitt.edu"><img class="sponsor_logo" src="pitt.png" target="_blank"></a>
+      <a href="https://www.darpa.mil"><img class="sponsor_logo" src="https://triagechallenge.darpa.mil/images/global/DARPA-logo-fullsize.png" target="_blank"></a>
+      <a href="https://www.flir.com"><img class="sponsor_logo" src="flir.png"></a>
+      <a href="https://www.rti.com"><img class="sponsor_logo" src="https://www.rti.com/hubfs/Master%20Graphics%20Folder/Logos/RTI/RTI-Logo-rev.svg" target="_blank"></a>
+      <a href="https://www.lockheedmartin.com/en-us/index.html"><img class="sponsor_logo" src="lockhead.jpeg" target="_blank"></a>
+  </div>  -->
+  <div class="logo_container">
+    <a href="https://triagechallenge.darpa.mil/"><img class="sponsor_logo" src="logos/logo_dtc.png" target="_blank"></a>
+    <a href="https://www.cmu.edu"><img class="sponsor_logo" src="https://www.cmu.edu/brand/brand-guidelines/images/wordmarksquare-red-600x600.png" target="_blank"></a>
+    <a href="https://www.pitt.edu"><img class="sponsor_logo" src="logos/logo_pitt.png" target="_blank"></a>
+    <!-- <a href="https://www.darpa.mil"><img class="sponsor_logo" src="https://triagechallenge.darpa.mil/images/global/DARPA-logo-fullsize.png" target="_blank"></a> -->
+</div> 
+
+
+    <span class="w3-xlarge">Our work is supported by our sponsors. Will you join us in making a difference? <a href="mailto:darpa-triage@cmu.edu">Email Us</a></span>
+
+</div>
+  <!-- <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div> -->
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center">We, a Carnegie Mellon University based team, are competing at the  <a href="https://triagechallenge.darpa.mil/" target="_blank"> DARPA Triage Challenge (DTC)</a></h3>
+  <!-- <p class="w3-center w3-large">About the challenge</p> -->
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+
+    <div class="w3-third">
+      <p class="w3-large">Objective</p>
+      <!-- <p>DTC aims to advance medical triage technologies that rapidly identify injury signatures, enhancing responses in mass casualty incidents where medical resources are limited.</p> -->
+      <p>Ensure scalable, timely, and accurate triage by developing noninvasive, remote detection methods for injury assessment </p>
+    </div>
+    <div class="w3-third">
+      <p class="w3-large">Challenge</p>
+      <!-- <p> breakthrough innovations in identification of “signatures” of injury that will help medical responders perform scalable, timely, and accurate triage</p> -->
+      <p>Employ autonomous robots to identify and classify human injuries from a distance of 1-10 meters, without physical contact, to help medical responders perform timely, and accurate triage</p>
+    </div>
+    <div class="w3-third">
+      <p class="w3-large">Novel Technology</p>
+      <p>Measure physiological features using compact, multi-modal sensor packs. Assess injuries with devices like VIS/SWIR imaging, thermal cameras, radar, and motion-tracking LiDAR. Navigate challenging environments using autonomous robots equipped with SLAM for enhanced sensing and diagnostics.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section - "We know design" -->
+<div class="bgimg-2 w3-container w3-grey" style="padding:128px 16px" id="timeline">
+  <div class="w3-row-padding">
+  <h3 class="w3-center w3-white">Timeline</h3>
+
+    <div class="timeline">
+      <div class="container_timeline left">
+        <div class="content_timeline">
+          <h2>Nov 2023</h2>
+          <p>DARPA Triage Challenge Kickoff</p>
         </div>
-
-        <div id="top" class="content">
-            <br><br><br><br><br><br><br>
-            <div class="inner_content">
-                <h1>STRAPS works towards making remote autonomous triage a reality.</h1>
-                <h2>We build robotic systems to identify and characterize casualties and monitor vital signals and conditions before first responders are dispatched.</h2>
-                <h2>Our team, based at Carnegie Mellon University, is competing in <a href="https://triagechallenge.darpa.mil/">DARPA's TRIAGE challenge</a>.</h2>
-            </div>
-            <div class="inner_content">
-                <div class="logo_container">
-                    <a href="https://www.cmu.edu"><img class="sponsor_logo" src="https://www.cmu.edu/brand/brand-guidelines/images/wordmarksquare-red-600x600.png"></a>
-                    <a href="https://www.pitt.edu"><img class="sponsor_logo" src="pitt.png"></a>
-                    <a href="https://www.darpa.mil"><img class="sponsor_logo" src="https://triagechallenge.darpa.mil/images/global/DARPA-logo-fullsize.png"></a>
-                    <a href="https://www.flir.com"><img class="sponsor_logo" src="flir.png"></a>
-                    <a href="https://www.rti.com"><img class="sponsor_logo" src="https://www.rti.com/hubfs/Master%20Graphics%20Folder/Logos/RTI/RTI-Logo-rev.svg"></a>
-                </div>
-                <div class="logo_container">
-                    <h2>Our work is supported by our sponsors. Will you become the next?</h2>
-                    <div class="contact_us">
-                        <h2>
-                            <a href="#contact">Contact Us</a>
-                        </h2>
-                </div>
-                </div>
-            </div>
+      </div>
+      <div class="container_timeline right">
+        <div class="content_timeline">
+          <h2>Mar 2024</h2>
+          <p>First Demonstration of the system</p>
         </div>
+    </div>
 
-        <div id="solution" class="content">
-            <div class="inner_content">
-                <h1>Our solution characterizes human casualties through sensor fusion in adverse environments.</h1>
-                <h2>Optical & infrared cameras scan the human body for injuries and bodily condition.</h2>
-                <h2>Radar & laser vibrometry measure heart and breathing rates.</h2>
-                <h2>Combining advanced processing with off-the-shelf sensors forms a low-risk high-reward system that is applicable to a wide range of users.</h2>
-            </div>
-            <div class="inner_content">
-                <h1>Timeline</h1>
-                <div class="timeline">
-                    <div id="dates">
-                        <h2>Nov 2024</h2>
-                        <h2>Mar 2024</h2>
-                        <h2>Jun 2024</h2>
-                        <h2>Fall 2024</h2>
-                        <h2>Fall 2025</h2>
-                        <h2>Fall 2026</h2>
-                    </div>
-                    <div id="items">
-                        <h2>TRIAGE Challenge Kickoff</h2>
-                        <h2>First demonstration of system</h2>
-                        <h2>Phase 1 Qualification Challenge</h2>
-                        <h2>Phase 1 Competition</h2>
-                        <h2>Phase 2 Competition</h2>
-                        <h2>Phase 3 Competition</h2>
-                    </div>
-                    <div id="line">
-                        <h2>-</h2>
-                        <h2>-</h2>
-                        <h2>-</h2>
-                        <h2>-</h2>
-                        <h2>-</h2>
-                        <h2>-</h2>
-                    </div>
-                </div>
-            </div>
+    <div class="timeline">
+      <div class="container_timeline left">
+        <div class="content_timeline">
+          <h2>Jun 2024</h2>
+          <p>Phase 1 Qualification Challenge</p>
         </div>
-
-        <div id="team" class="content">
-            <h1 id="team_h1">
-                Team STRAPS consists of professors, physicians, researchers, and students with a wide range of experience in robotics and medicine. Meet some of us below:
-            </h1>
-            <div id="team_container">
-                <div class="team_box">
-                    <div class="team_photo" style="background-image:url('elenberg.jpg')"></div>
-                    <h2>Kimberly Elenberg</h2>
-                    <h3><i>Leading PI</i></h3>
-                    <h3>Principal Scientist, Auton Lab, CMU</h3>
-                    <a href="https://www/linkedin.com/in/kimberly-elenberg-0b52a595"><img src="li.png" class="link"></a>
-                </div>
-                <div class="team_box">
-                    <div class="team_photo" style="background-image:url('basti.jpeg')"></div>
-                    <h2>Sebastian Scherer</h2>
-                    <h3><i>Co-PI</i></h3>
-                    <h3>Associate Research Professor, AirLab, CMU</h3>
-                    <a href="https://www.theairlab.org"><img class="link" src="https://theairlab.org/img/logos/Horizontal@2x.png"></a>
-                </div>
-                <div class="team_box">
-                    <div class="team_photo" style="background-image:url('huyaoyu.jpeg')"></div>
-                    <h2>Yaoyu Hu</h2>
-                    <h3>Senior Project Scientist, AirLab, CMU</h3>
-                    <h3><a href="https://www.huyaoyu.com">huyaoyu.com</a></h3>
-                </div>
-                <div class="team_box">
-                    <div class="team_photo" style="background-image:url('dhruvsrikanth.jpeg')"></div>
-                    <h2>Dhruv Srikanth</h2>
-                    <h3>Research Engineer, Auton Lab, CMU</h3>
-                    <h3><a href="https://dhruvsrikanth.github.io">dhruvsrikanth.github.io</a></h3>
-                </div>
-            </div>
+      </div>
+      <div class="container_timeline right">
+        <div class="content_timeline">
+          <h2>Sep 2024</h2>
+          <p>Phase 1 Competition</p>
         </div>
+      </div>
+    </div>
 
-        <div id="contact" class="content">
-            <h1>Want to learn more? Contact us!</h1>
-            <form method="post" id="contact_form" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSc8jfU3MNnyU3gRC6ONjaVGMCuhbI5DiinsdIllkn1MJ9IRww/formResponse">
-                <label for="name">Name</label>
-                <input type="text" name="entry.2077106070" id="name" required><br>
-                <label for="email">E-mail Address</label>
-                <input type="email" name="entry.1365988357" id="email" required><br>
-                <label for="company">Company/Organization</label>
-                <input type="text" name="entry.1682409040" id="company" required><br>
-
-                <h2>What are you inquiring about?</h2>
-                <input type="checkbox" id="sponsorship" name="entry.23716341" value="Sponsorship">
-                <label for="sponsorship">Sponsorship</label><br>
-                <input type="checkbox" id="collaboration" name="entry.23716341" value="Collaboration">
-                <label for="collaboration">Collaboration</label><br>
-                <input type="checkbox" id="other" name="entry.23716341" value="General questions">
-                <label for="other">Other</label><br>
-
-                <h2>Your message</h2>
-                <textarea name="entry.452092947" id="message" required></textarea><br><br>
-                <input type="submit" value="Submit" id="submit">
-            </form><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="timeline">
+      <div class="container_timeline left">
+        <div class="content_timeline">
+          <h2>Fall 2025</h2>
+          <p>Phase 2 Competition</p>
         </div>
-        
-        <script src="script.js"></script>
-   
-    </body>
+      </div>
+      <div class="container_timeline right">
+        <div class="content_timeline">
+          <h2>Fall 2026</h2>
+          <p>Phase 3 Competition</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">The Team</h3>
+  <p class="w3-center w3-large">Team Chiron consists of professors, physicians, researchers, and students with a wide range of experience in robotics and medicine</p>
+  <p class="w3-center w3-hide-medium">Meet some of our team leads below</p>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <a href="https://www.linkedin.com/in/kimberly-elenberg-0b52a595" target="_blank"><img src="images/elenberg.jpg" alt="John" style="width: 100%; height: 280px; object-fit: cover; border-radius: 5px;"></a>
+        <div class="w3-container">
+          <h3>Dr. Kimberly Elenberg</h3>
+          <p class="w3-opacity">Programmatic Lead, Leading PI</p>
+          <p>Principal Scientist</p>
+            <p>Auton Lab, CMU</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <a href="https://www.theairlab.org" target="_blank"><img src="images/basti.jpeg" alt="John" style="width: 100%; height: 280px; object-fit: cover; border-radius: 5px;"></a>
+        <div class="w3-container">
+          <h3>Dr. Sebastian Scherer</h3>
+          <p class="w3-opacity">Autonomous Robotics Lead, Co-PI</p>
+          <p>Associate Research Professor</p> 
+          <p>AirLab, CMU</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <a href="https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/" target="_blank"><img src="images/dubrawski_artur.jpg" alt="John" style="width: 100%; height: 280px; object-fit: cover; border-radius: 5px;"></a>
+        <div class="w3-container">
+          <h3>Dr. Artur Dubrawski</h3>
+          <p class="w3-opacity">AI/ML Systems Lead</p>
+          <p>Research Professor</p>
+          <p> AutonLab, CMU</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <a href="https://www.ri.cmu.edu/ri-faculty/john-galeotti/" target="_blank"><img src="images/jgaleotti.jpg" alt="John" style="width: 100%; height: 280px; object-fit: cover; border-radius: 5px;"></a>
+        <div class="w3-container">
+          <h3>Dr. John Galeotti</h3>
+          <p class="w3-opacity">Medical Imaging AI Lead</p>
+          <p>Systems Scientist & Adjunct Asst. Prof.</p>
+           <p>Biomedical Image Guidance Lab, CMU</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom" style = "margin-left: 5%;">
+      <div class="w3-card">
+        <a href="https://www.laszlojeni.com/" target="_blank"><img src="images/Laszlo-Jeni.png" alt="John" style="width: 100%; height: 280px; object-fit: cover; border-radius: 5px;"></a>
+        <div class="w3-container">
+          <h3>Dr. Laszlo Jeni</h3>
+          <p>Assistant Research Professor</p> 
+          <p>CUBE Lab, CMU</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom" style = "margin-left: 5%;">
+      <div class="w3-card">
+        <a href="https://www.cs.cmu.edu/~srinivas/" target="_blank"><img src="images/srinivas-2019.jpeg" alt="John" style="width: 100%; height: 280px; object-fit: cover; border-radius: 5px;"></a>
+        <div class="w3-container">
+          <h3>Dr. Srinivasa Narasimhan</h3>
+          <p>Professor</p>
+          <p>ILIM Lab, CMU</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom" style = "margin-left: 5%;">
+      <div class="w3-card">
+        <a href="https://www.emergencymedicine.pitt.edu/people/leonard-weiss" target="_blank"><img src="images/lenny weiss_0.jpg" alt="John" style="width: 100%; height: 280px; object-fit: cover; border-radius: 5px;"></a>
+        <div class="w3-container">
+          <h3>Dr. Lenny Weiss</h3>
+          <p>Assoc. Prof. of Emergency Medicine</p><p>University of Pittsburgh</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Our sponsors and partners -->
+<div class="w3-container w3-black" style="padding:128px 16px" id="sponsors">
+  <h3 class="w3-center">Our Sponsors and Partners</h3>
+  <p class="w3-center w3-large">We are proud to collaborate with the following sponsors and partners</p>
+
+  <!-- First row (bigger logos) -->
+  <div class="w3-center" style="margin-top: 32px; margin-bottom: 40px;">
+    <div class="logo-row">
+      <img src="logos/logo_dtc.png" alt="Large Logo 1" class="logo-large">
+      <img src="logos/logo_cmu.png" alt="Large Logo 2" class="logo-large">
+      <img src="logos/logo_pitt.png" alt="Large Logo 3" class="logo-large" style="max-width: 15%;">
+    </div>
+  </div>
+
+  <!-- Second row (medium logos) -->
+  <div class="w3-center" style="margin-top: 32px; margin-bottom: 40px;">
+    <div class="logo-row">
+      <img src="logos/logo_loackhead_dark.jpg" alt="Medium Logo 1" class="logo-medium" style="max-width: 22%;">
+      <img src="logos/logo_denso.png" alt="Medium Logo 1" class="logo-medium">
+      <img src="logos/logo_cbi.svg" alt="Medium Logo 2" class="logo-medium">
+      <img src="logos/logo_figur8.webp" alt="Medium Logo 3" class="logo-medium">
+    </div>
+    <div class="logo-row" style="margin-top: 16px;">
+      <img src="logos/logo_ngi.png" alt="Medium Logo 4" class="logo-medium-second-row" style="max-width: 25.02%;">
+      <img src="logos/logo_pita.svg" alt="Medium Logo 4" class="logo-medium-second-row">
+      <img src="logos/logo_ecs.png" alt="Medium Logo 4" class="logo-medium-second-row">
+    </div>
+  </div>
+
+  <!-- Third row (smaller logos) -->
+  <div class="w3-center" style="margin-top: 32px; margin-bottom: 40px;">
+    <div class="logo-row">
+      <img src="logos/Dell_Logo.svg.png" alt="Small Logo 2" class="logo-small">
+      <img src="logos/flir.png" alt="Small Logo 1" class="logo-small">
+      <img src="logos/logo_rti.png" alt="Small Logo 1" class="logo-small">
+      <img src="logos/logo_tioga_ranch.webp" alt="Small Logo 1" class="logo-small" style="max-width:15% ;">
+    </div>
+  </div>
+
+  <p class="w3-center w3-large">We want to recognize and extend our appreciation to <strong>William B. King</strong> for the gifts of funding and support.</p>
+  
+  <p class="w3-center w3-xlarge w3-margin-top"></p>
+</div>
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px 0px" id="contact">
+  <h3 class="w3-center">Join Us</h3>
+  <p class="w3-center w3-large">We are seeking technology partners and funding
+    sponsors to join this important effort in health
+    technology, robotics, and the advancement of
+    sensing capabilities.</p>
+  <br><br>
+
+  <h5 class ="w3-center">Our sponsorship levels</h5>
+
+
+  
+  
+    <div class="w3-center" style="margin-top:32px">
+      <div class="w3-display-container w3-white w3-round-large w3-border" style="display: inline-block; max-width: 80%; padding: 16px;">
+        <table class="w3-table w3-bordered w3-white">
+          <thead>
+            <tr style="background-color: #222;">
+              <th style="width: 40%; color: #fff;">Sponsor Benefits</th>
+              <th style="background-color: #e74c3c; color: #fff;">$25k Contributing Responder Partner</th>
+              <th style="background-color: #2980b9; color: #fff;">$50k Critical Response Partner</th>
+              <th style="background-color: #27ae60; color: #fff;">$100k First Response Partner</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="highlight">Branding</span> (acknowledgement with logo on website and marketing materials, including link to sponsor’s website)</td>
+              <td class="tick-cell">&#10003;</td>
+              <td class="tick-cell">&#10003;</td>
+              <td class="tick-cell">&#10003;</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+              <td><span class="highlight">Participation</span> (attend research reviews to network and meet students)</td>
+              <td class="tick-cell">&#10003;</td>
+              <td class="tick-cell">&#10003;</td>
+              <td class="tick-cell">&#10003;</td>
+            </tr>
+            <tr>
+              <td><span class="highlight">Communication</span> (receive regular updates from Team Chiron)</td>
+              <td class="tick-cell">&#10003;</td>
+              <td class="tick-cell">&#10003;</td>
+              <td class="tick-cell">&#10003;</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+              <td><span class="highlight">Events</span> (receive links to talks, seminars and events by Team Chiron)</td>
+              <td class="tick-cell">&#10003;</td>
+              <td class="tick-cell">&#10003;</td>
+              <td class="tick-cell">&#10003;</td>
+            </tr>
+            <tr>
+              <td><span class="highlight">Recruitment</span> (employment opportunity posts for students, table at CMU-hosted Team Chiron events, lunch/reception with graduate students and conference room to interview students)</td>
+              <td class="tick-cell"></td>
+              <td class="tick-cell">&#10003;</td>
+              <td class="tick-cell">&#10003;</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+              <td><span class="highlight">Selection of a Chiron fellow</span> (graduate student) volunteer to interact with in an area of interest (will be paired with a designated company mentor)</td>
+              <td class="tick-cell"></td>
+              <td class="tick-cell"></td>
+              <td class="tick-cell">&#10003;</td>
+            </tr>
+            <tr>
+              <td><span class="highlight">Option to send a visiting researcher/collaborator</span> (additional agreement + 10 percent discount off of standard visitor’s fee)</td>
+              <td class="tick-cell"></td>
+              <td class="tick-cell"></td>
+              <td class="tick-cell">&#10003;</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+              <td><span class="highlight">On-campus recruiting day</span></td>
+              <td class="tick-cell"></td>
+              <td class="tick-cell"></td>
+              <td class="tick-cell">&#10003;</td>
+            </tr>
+            <tr>
+              <td><span class="highlight">In-person technical talk by sponsor</span> to students and faculty</td>
+              <td class="tick-cell"></td>
+              <td class="tick-cell"></td>
+              <td class="tick-cell">&#10003;</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+
     
+    <br><br>
+
+    <h5 class="w3-center" style="margin-top: 48px;">Separate Partnership Affiliations</h5>
+    <div class="w3-center" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 32px;">
+      <div style="flex: 1 1 calc(20% - 32px); max-width: calc(20% - 32px);">
+        <div class="w3-card w3-padding w3-round-large" style="background-color: #f5f5f5;">
+          <h6 style="font-size: 1.2em; color: #333;"><strong>Chiron Team Research Partner</strong></h6>
+          <p style="font-size: 1em; color: #666;">(sponsored research agreements)</p>
+        </div>
+      </div>
+      <div style="flex: 1 1 calc(20% - 32px); max-width: calc(20% - 32px);">
+        <div class="w3-card w3-padding w3-round-large" style="background-color: #f5f5f5;">
+          <h6 style="font-size: 1.2em; color: #333;"><strong>Chiron Research Visitor Partner</strong></h6>
+          <p style="font-size: 1em; color: #666;">(visitor agreements)</p>
+        </div>
+      </div>
+      <div style="flex: 1 1 calc(20% - 32px); max-width: calc(20% - 32px);">
+        <div class="w3-card w3-padding w3-round-large" style="background-color: #f5f5f5;">
+          <h6 style="font-size: 1.2em; color: #333;"><strong>Chiron Technical Development Collaborator</strong></h6>
+          <p style="font-size: 1em; color: #666;">(services and/or development assistance, not processed as an in-kind gift)</p>
+        </div>
+      </div>
+      <div style="flex: 1 1 calc(20% - 32px); max-width: calc(20% - 32px);">
+        <div class="w3-card w3-padding w3-round-large" style="background-color: #f5f5f5;">
+          <h6 style="font-size: 1.2em; color: #333;"><strong>Chiron Software Provider</strong></h6>
+          <p style="font-size: 1em; color: #666;">(use of software, not processed as an in-kind gift)</p>
+        </div>
+      </div>
+      <div style="flex: 1 1 calc(20% - 32px); max-width: calc(20% - 32px);">
+        <div class="w3-card w3-padding w3-round-large" style="background-color: #f5f5f5;">
+          <h6 style="font-size: 1.2em; color: #333;"><strong>Chiron Data Partner</strong></h6>
+          <p style="font-size: 1em; color: #666;">(data sharing agreements)</p>
+        </div>
+      </div>
+    </div>
+    
+    <br><br>
+  
+  
+  <h4 class="w3-center">Reach out for more information and/or collaboration inquiry</h4>
+  <div style="margin-top:48px" class="w3-center">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Robotics Institute, Carnegie Mellon University, 1723 Murray Ave, Pittsburgh, PA 15217</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: (412) 589-9581</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: darpa-triage@cmu.edu</p>
+    <br>
+  </div>
+
+
+</div>
+  
+  <br><br>
+  
+    <!-- <div class="w3-center">
+        <a href="https://www.cmu.edu"><img class="sponsor_logo" src="https://www.cmu.edu/brand/brand-guidelines/images/wordmarksquare-red-600x600.png" target="_blank"></a>
+        <a href="https://www.pitt.edu"><img class="sponsor_logo" src="pitt.png" target="_blank"></a>
+        <a href="https://www.darpa.mil"><img class="sponsor_logo" src="https://triagechallenge.darpa.mil/images/global/DARPA-logo-fullsize.png" target="_blank"></a>
+        <a href="https://www.flir.com"><img class="sponsor_logo" src="flir.png"></a>
+        <a href="https://www.rti.com"><img class="sponsor_logo" src="https://www.rti.com/hubfs/Master%20Graphics%20Folder/Logos/RTI/RTI-Logo-rev.svg" target="_blank"></a>
+        <a href="https://www.lockheedmartin.com/en-us/index.html"><img class="sponsor_logo" src="lockhead.jpeg" target="_blank"></a>
+    </div>  -->
+
+    <br><br>
+
+    <!-- <h4 class ="w3-center">Reach out for more information and/or collaboration inquiry</h4>
+  <div style="margin-top:48px" class = "w3-center">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> RI, Squirrel Hill Location, CMU, 1723 Murray Ave, Pittsburgh, PA 15217</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: (412) 589-9581</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: darpa-triage@cmu.edu</p>
+    <br>
+
+     Image of location/map -->
+
+  <!-- </div>
+    <div class="logo_container w3-center">
+        <a href="https://www.cmu.edu"><img class="sponsor_logo_center" src="https://www.cmu.edu/brand/brand-guidelines/images/wordmarksquare-red-600x600.png" target="_blank"></a>
+        <a href="https://www.pitt.edu"><img class="sponsor_logo_center" src="pitt.png" target="_blank"></a>
+        <a href="https://www.lockheedmartin.com/en-us/index.html"><img class="sponsor_logo_center" src="lockhead.jpeg" target="_blank"></a>
+        <a href="https://www.flir.com"><img class="sponsor_logo_center" src="flir.png"></a>
+        <a href="https://www.rti.com"><img class="sponsor_logo_center" src="https://www.rti.com/hubfs/Master%20Graphics%20Folder/Logos/RTI/RTI-Logo-rev.svg" target="_blank"></a>
+        <a href="https://flypittsburgh.com/"><img class="sponsor_logo_center" src="pitts_in.png" target="_blank"></a>
+    </div> 
+    <div class="logo_container w3-center">
+        <a href="https://www.darpa.mil"><img class="sponsor_logo_center" src="https://triagechallenge.darpa.mil/images/global/DARPA-logo-fullsize.png" target="_blank"></a>
+    </div> -->
+  </div>
+  </div>
+</div>
+
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+<footer class="w3-center w3-dark-grey w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
 </html>
