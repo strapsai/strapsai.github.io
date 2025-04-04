@@ -199,13 +199,12 @@ section {
     overflow: hidden;
 }
 
-/* Tactical Scene */
 .tactical-scene {
     background: url('/api/placeholder/1200/800') center/cover no-repeat;
     position: relative;
     padding-top: 60px; /* Account for fixed navigation */
-    padding-bottom: 60px; /* Account for fixed footer */
-    height: calc(100vh); /* Use full viewport height */
+    padding-bottom: 20px; /* Reduced padding as sponsors are no longer inside */
+    height: 70vh; /* Adjust height to give room for sponsors below */
     overflow: hidden;
 }
 
@@ -361,7 +360,7 @@ section {
 
 .control-center {
     position: absolute;
-    bottom: 20px;
+    bottom: 200px; /* Moved up to be above the sponsors bar */
     left: 20px;
     background-color: rgba(71, 68, 47, 0.7);
     border: 1px solid var(--dark-camel);
@@ -370,6 +369,7 @@ section {
     display: flex;
     flex-direction: column;
     min-width: 200px;
+    z-index: 200; /* Ensure it's above the sponsors bar */
 }
 
 .control-center h3 {
@@ -394,18 +394,130 @@ section {
     pointer-events: none;
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 0.7;
-    }
-    70% {
-        opacity: 0.3;
-    }
-    100% {
-        transform: scale(1.5);
-        opacity: 0;
-    }
+/* Sponsors Carousel */
+.sponsors-section {
+    position: relative; /* Changed from absolute positioning */
+    background-color: rgba(71, 68, 47, 0.85);
+    padding: 20px 0;
+    border-top: 1px solid var(--dark-camel);
+    border-bottom: 1px solid var(--dark-camel);
+    z-index: 100;
+}
+
+.sponsors-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sponsors-text {
+    flex: 0 0 35%;
+    padding-right: 40px;
+}
+
+.sponsors-text h2 {
+    color: var(--medic-red);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sponsors-text p {
+    color: var(--light-camel);
+    line-height: 1.5;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.sponsor-recognition {
+    margin-top: 15px;
+    font-style: italic;
+    border-left: 3px solid var(--medic-red);
+    padding-left: 15px;
+    font-size: 0.85rem;
+}
+
+.sponsors-carousel {
+    flex: 0 0 65%;
+    position: relative;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    background-color: rgba(214, 205, 182, 0.05);
+    border: 1px solid var(--dark-camel);
+    padding: 20px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    position: relative;
+}
+
+.carousel-slide {
+    flex: 0 0 calc(33.333% - 20px);
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    position: relative;
+}
+
+.carousel-slide:hover {
+    opacity: 1;
+}
+
+.carousel-slide.tier-1 {
+    height: 100px;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(30%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-slide img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Update control center positioning */
+.control-center {
+    position: absolute;
+    bottom: 20px; /* Position at bottom of tactical scene */
+    left: 20px;
+    background-color: rgba(71, 68, 47, 0.7);
+    border: 1px solid var(--dark-camel);
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    z-index: 200;
+}
+
+.carousel-control:hover {
+    background-color: var(--light-camel);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
@@ -511,5 +623,25 @@ section {
 
     .chiron-overlay {
         max-width: 300px;
+    }
+
+    .sponsors-container {
+        flex-direction: column;
+    }
+
+    .sponsors-text, .sponsors-carousel {
+        flex: 0 0 100%;
+    }
+
+    .sponsors-text {
+        padding-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .sponsor-recognition {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 80%;
     }
 }

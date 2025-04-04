@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Initialize both components
                     initTacticalScene();
                     initButtonNav();
+                    initCarousel();
                 }, 500);
             }, 500);
         }
@@ -126,6 +127,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+
 
     // Tactical scene logic
     function initTacticalScene() {
@@ -366,4 +369,55 @@ document.addEventListener('DOMContentLoaded', function() {
         // Start the animation
         animateScene();
     }
+
+    // Carousel auto-rotation function
+    function initCarousel() {
+        const carouselTrack = document.getElementById('carousel-track');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        // Check if carousel elements exist
+        if (!carouselTrack || !prevBtn || !nextBtn) return;
+
+        // Get all slides
+        const slides = carouselTrack.querySelectorAll('.carousel-slide');
+        if (slides.length === 0) return;
+
+        // Calculate the width of one slide (including margins)
+        const slideWidth = slides[0].offsetWidth + 20; // 20px for margins (10px on each side)
+
+        // Variables to track position
+        let position = 0;
+        const visibleSlides = 3; // Number of slides visible at once
+        const totalSlides = slides.length;
+
+        // Function to move to next slide
+        function moveToNextSlide() {
+            position++;
+            // Reset to beginning when reaching the end
+            if (position >= totalSlides - visibleSlides + 1) {
+                position = 0;
+            }
+            carouselTrack.style.transform = `translateX(-${position * slideWidth}px)`;
+        }
+
+        // Set up auto-rotation at 300ms interval
+        const autoRotateInterval = setInterval(moveToNextSlide, 800);
+
+        // Manual control buttons
+        prevBtn.addEventListener('click', function() {
+            clearInterval(autoRotateInterval); // Stop auto-rotation when manual control is used
+            position--;
+            if (position < 0) {
+                position = totalSlides - visibleSlides;
+            }
+            carouselTrack.style.transform = `translateX(-${position * slideWidth}px)`;
+        });
+
+        nextBtn.addEventListener('click', function() {
+            clearInterval(autoRotateInterval); // Stop auto-rotation when manual control is used
+            moveToNextSlide();
+        });
+    }
+
 });
