@@ -85,7 +85,7 @@ Add a default-thumbnail.webp image to this folder for articles without specific 
 
 You can add news items in two ways:
 
-#### Option 1: Edit the newsItems Array
+#### Option 1: Edit the newsItems Array (Recommended)
 
 In `tabs/news/news.js`, update the `newsItems` array:
 
