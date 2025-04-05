@@ -268,3 +268,40 @@ window.addEventListener('load', function() {
     console.log("Window loaded, checking news section again...");
     setTimeout(initializeNewsContent, 500); // Small delay to ensure dynamic content is ready
 });
+
+// News Alert functionality
+function initNewsAlert() {
+    // Just adjust positioning of navigation and scene to accommodate news alert bar
+    adjustLayoutForNewsTicker();
+}
+
+function adjustLayoutForNewsTicker() {
+    const newsTicker = document.getElementById('news-ticker');
+    const buttonNav = document.querySelector('.button-nav');
+    const scene = document.querySelector('.tactical-scene');
+    
+    if (newsTicker && buttonNav && scene) {
+        const newsTickerHeight = newsTicker.offsetHeight;
+        
+        // Adjust navigation position
+        buttonNav.style.top = `${newsTickerHeight}px`;
+        
+        // Adjust scene padding to account for both nav and ticker
+        scene.style.paddingTop = `${60 + newsTickerHeight}px`;
+    }
+}
+
+// Add news alert initialization to the existing code
+document.addEventListener('DOMContentLoaded', function() {
+    // Original code remains the same
+    
+    // Add this to the window.onload event or existing load event
+    window.addEventListener('load', function() {
+        initNewsAlert();
+        
+        // Also adjust on window resize
+        window.addEventListener('resize', function() {
+            adjustLayoutForNewsTicker();
+        });
+    });
+});

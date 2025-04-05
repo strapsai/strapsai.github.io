@@ -208,6 +208,94 @@ section {
     overflow: hidden;
 }
 
+/* News Alert Bar Styles */
+#news-ticker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(30, 30, 20, 0.9);
+    border-bottom: 1px solid var(--dark-camel);
+    z-index: 2000; /* Higher than other elements */
+    height: 32px;
+    overflow: hidden;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.news-ticker-container {
+    display: flex;
+    height: 100%;
+    max-width: 100%;
+}
+
+.news-ticker-label {
+    background-color: var(--medic-red);
+    color: white;
+    font-weight: bold;
+    font-size: 0.7rem;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    letter-spacing: 1px;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    min-width: 120px;
+}
+
+.news-ticker-content {
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.news-alert {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.news-alert span {
+    color: var(--light-text);
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+/* Adjust button nav to accommodate news ticker */
+.button-nav {
+    top: 32px; /* Height of the news ticker */
+}
+
+/* Adjust tactical scene padding for the news ticker */
+.tactical-scene {
+    padding-top: 92px; /* 60px (original) + 32px (news ticker) */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .news-ticker-label {
+        font-size: 0.65rem;
+        padding: 0 10px;
+        min-width: 100px;
+    }
+    
+    .news-ticker-scroll span {
+        font-size: 0.75rem;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-ticker-label {
+        min-width: 80px;
+    }
+}
+
 .tactical-scene {
     background: url('assets/backgrounds/plane_crash.jpg') center/cover no-repeat;
     position: relative;
