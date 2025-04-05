@@ -128,7 +128,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-
+    // Position Sponsor Carousel
+    function positionSponsorSection() {
+        const tacticalScene = document.querySelector('.tactical-scene');
+        const sponsorSection = document.querySelector('.sponsors-section');
+        
+        if (tacticalScene && sponsorSection) {
+            // Calculate position to place sponsors at bottom of viewport
+            const viewportHeight = window.innerHeight;
+            const sceneHeight = viewportHeight;
+            
+            // Set tactical scene to full viewport height
+            tacticalScene.style.height = `${sceneHeight}px`;
+            
+            // Force sponsors to appear just at the bottom edge of viewport
+            const sponsorHeight = sponsorSection.offsetHeight;
+            sponsorSection.style.marginTop = `-${sponsorHeight}px`;
+            
+            // Adjust control center position to stay clear of sponsors
+            const controlCenter = document.querySelector('.control-center');
+            if (controlCenter) {
+                controlCenter.style.bottom = `${sponsorHeight + 40}px`;
+            }
+        }
+    }
 
     // Tactical scene logic
     function initTacticalScene() {
@@ -541,5 +564,11 @@ document.addEventListener('DOMContentLoaded', function() {
             cancelAnimationFrame(animationFrame);
         };
     }
+
+    // Call positionSponsorSection after initialization
+    window.addEventListener('load', positionSponsorSection);
+    // Also adjust on window resize
+    window.addEventListener('resize', positionSponsorSection);
+
 
 });

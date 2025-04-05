@@ -28,11 +28,10 @@ body {
 /* Main Title Styles */
 .main-title {
     position: absolute;
-    top: 90px; /* Adjusted to fit the new layout */
+    top: 90px;
     left: 30px;
     max-width: 600px;
     z-index: 1000;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability over any background */
 }
 
 .main-title h1 {
@@ -213,18 +212,24 @@ section {
     background: url('assets/backgrounds/plane_crash.jpg') center/cover no-repeat;
     position: relative;
     padding-top: 60px; /* Account for fixed navigation */
-    padding-bottom: 60px; /* Reduced padding as sponsors are no longer inside */
-    height: 70vh; /* Adjust height to give room for sponsors below */
+    padding-bottom: 0;
+    height: 100vh; /* Full viewport height */
+    min-height: 800px; /* Ensure good height on all devices */
     overflow: hidden;
+    margin-bottom: 0; /* Remove any margin */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.tactical-scene {
-    background: url('assets/backgrounds/plane_crash.jpg') center/cover no-repeat;
-    position: relative;
-    padding-top: 60px; /* Account for fixed navigation */
-    padding-bottom: 60px;
-    height: 70vh; /* Maintain consistent height */
-    overflow: hidden;
+/* Ensure main content container doesn't add extra space */
+#main-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -394,7 +399,7 @@ section {
 
 .control-center {
     position: absolute;
-    bottom: 20px; /* Position at bottom of tactical scene */
+    bottom: 100px; /* Even higher from bottom */
     left: 20px;
     background-color: rgba(71, 68, 47, 0.7);
     border: 1px solid var(--dark-camel);
@@ -404,8 +409,6 @@ section {
     flex-direction: column;
     min-width: 200px;
     z-index: 200;
-    transform: none;
-    margin: 0;
 }
 
 .control-center h3 {
@@ -434,11 +437,13 @@ section {
 .sponsors-section {
     position: relative;
     background-color: rgba(71, 68, 47, 0.85);
-    padding: 10px 0; /* Reduced top/bottom padding */
+    padding: 10px 0 8px 0; /* Further reduced padding */
     border-top: 1px solid var(--dark-camel);
     border-bottom: 1px solid var(--dark-camel);
     width: 100%;
     z-index: 100;
+    margin-top: auto; /* Push to bottom if in a flex container */
+    margin-bottom: 0;
 }
 
 .sponsors-container {
@@ -473,7 +478,8 @@ section {
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding: 3px 0; /* Reduced vertical padding */
+    padding: 0;
+    height: 60px; /* Even smaller fixed height */
 }
 
 .carousel-track {
@@ -600,12 +606,10 @@ section {
 
 /* Footer */
 .contact-footer {
-    background-color: rgba(71, 68, 47, 0.9);
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    position: relative;
     width: 100%;
+    padding: 15px 0;
+    background-color: rgba(71, 68, 47, 0.9);
     border-top: 1px solid var(--dark-camel);
     z-index: 900;
 }
