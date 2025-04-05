@@ -329,7 +329,7 @@ section {
 /* Tactical Scene Animation Settings */
 
 .tactical-scene {
-    background: url('assets/backgrounds/plane_crash.jpg') center/cover no-repeat;
+    background: url('assets/backgrounds/plane_crash_2K.jpg') center/cover no-repeat;
     position: relative;
     padding-top: 60px; /* Account for fixed navigation */
     padding-bottom: 0;
