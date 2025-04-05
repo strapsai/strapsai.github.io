@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CMU's DARPA Triage Challenge</title>
+    <title>Chiron | Making remote autonomous triage a reality</title>
+
+    <!-- Simple Favicon -->
+    <link rel="icon" href="assets/logo/chiron/icon/chiron-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/logo/chiron/icon/chiron-icon.png" type="image/x-icon">
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tabs/news/news.css">
 </head>
 <body>
     <!-- Loading Screen -->
@@ -66,7 +72,6 @@
             </div>
         </section>
 
-        <!-- Sponsors Section -->
         <!-- Sponsors Section -->
         <section class="sponsors-section" id="sponsors">
             <div class="sponsors-container">
@@ -143,6 +148,24 @@
             </div>
         </section>
 
+        <!-- News Section -->
+        <section class="news-section" id="news">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Latest News</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="news-grid">
+                    <!-- News cards will be generated here dynamically -->
+                </div>
+                
+                <div class="more-news">
+                    <a href="#all-news" class="more-news-button">View All News</a>
+                </div>
+            </div>
+        </section>
+
         <!-- Footer with contact links -->
         <footer class="contact-footer">
             <div class="footer-content">
@@ -162,5 +185,6 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="tabs/news/news.js"></script>
 </body>
 </html>
