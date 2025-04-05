@@ -200,15 +200,15 @@ section {
 }
 
 .tactical-scene {
-    background: url('/api/placeholder/1200/800') center/cover no-repeat;
+    background: url('assets/backgrounds/plane_crash.jpg') center/cover no-repeat;
     position: relative;
     padding-top: 60px; /* Account for fixed navigation */
-    padding-bottom: 20px; /* Reduced padding as sponsors are no longer inside */
+    padding-bottom: 60px; /* Reduced padding as sponsors are no longer inside */
     height: 70vh; /* Adjust height to give room for sponsors below */
     overflow: hidden;
 }
 
-.grid-overlay {
+/* .grid-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -219,7 +219,7 @@ section {
         linear-gradient(90deg, rgba(255, 50, 50, 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
     background-position: 0 0;
-}
+} */
 
 .casualty {
     position: absolute;
@@ -231,22 +231,34 @@ section {
     transform: rotate(45deg);
 }
 
-.drone {
+.robot-icon-container {
     position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 4px;
+    border-left: 4px solid #4CAF50; /* Green left border to indicate active */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transform: translate(-50%, -50%); /* Center the box on the robot's position */
+}
+
+/* Robot icon image styling */
+.robot-icon {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.drone {
     width: 30px;
     height: 30px;
     background-color: rgba(191, 179, 147, 0.2);
     border: 2px solid var(--army-camel);
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.drone::before {
-    content: "+";
-    color: var(--army-camel);
-    font-size: 18px;
 }
 
 .drone::after {
@@ -259,30 +271,37 @@ section {
     animation: pulse 2s infinite;
 }
 
-.quadruped {
+/* Drone coverage area styling */
+.drone-coverage {
     position: absolute;
+    border-radius: 50%;
+    border: 2px dashed rgba(76, 175, 80, 0.4); /* Green dashed border */
+    background-color: rgba(76, 175, 80, 0.1); /* Very light green fill */
+    z-index: 80; /* Below drones but above background */
+    transform: translate(-50%, -50%); /* Center the circle */
+    pointer-events: none; /* Allow clicks to pass through */
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.2); /* Subtle glow effect */
+    animation: pulse-coverage 4s infinite ease-in-out; /* Slow pulsing animation */
+}
+
+/* Pulsing animation for coverage area */
+@keyframes pulse-coverage {
+    0% { opacity: 0.4; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0.4; }
+}
+
+.quadruped {
     width: 35px;
     height: 20px;
     background-color: rgba(154, 142, 111, 0.2);
     border: 2px solid var(--dark-camel);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-.quadruped::before {
-    content: "";
+/* Adjust existing drone and quadruped styling to work with the icons */
+.drone, .quadruped {
     position: absolute;
-    bottom: -5px;
-    width: 6px;
-    height: 6px;
-    background-color: var(--dark-camel);
-    border-radius: 50%;
-    box-shadow: -10px 0 0 var(--dark-camel),
-                10px 0 0 var(--dark-camel),
-                -10px -14px 0 var(--dark-camel),
-                10px -14px 0 var(--dark-camel);
+    z-index: 90; /* Place below the icon */
 }
 
 .info-panel {
@@ -352,10 +371,18 @@ section {
 
 .connection-line {
     position: absolute;
-    height: 2px;
-    background-color: rgba(214, 205, 182, 0.4);
+    height: 1px;
+    background-color: rgba(255, 222, 222, 0.6);
     transform-origin: left center;
-    z-index: -1;
+    z-index: 50;
+    box-shadow: 0 0 5px rgba(255, 222, 222, 0.6);
+    animation: connectionPulse 2s infinite ease-in-out;
+}
+
+@keyframes connectionPulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 0.9; }
+    100% { opacity: 0.4; }
 }
 
 .control-center {
