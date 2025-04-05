@@ -297,6 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add this to the window.onload event or existing load event
     window.addEventListener('load', function() {
+        adjustLayoutForNewsTicker();
         initNewsAlert();
         
         // Also adjust on window resize
@@ -305,3 +306,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// News Alert functionality 
+function adjustLayoutForNewsTicker() {
+    const newsTicker = document.getElementById('news-ticker');
+    const buttonNav = document.querySelector('.button-nav');
+    const scene = document.querySelector('.tactical-scene');
+    
+    if (newsTicker && buttonNav && scene) {
+        const newsTickerHeight = newsTicker.offsetHeight;
+        
+        // Adjust navigation position
+        buttonNav.style.top = `${newsTickerHeight}px`;
+        
+        // Adjust scene padding to account for both nav and ticker
+        scene.style.paddingTop = `${60 + newsTickerHeight}px`;
+    }
+}

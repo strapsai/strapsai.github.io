@@ -296,6 +296,38 @@ section {
     }
 }
 
+/* Chiron Logo in navigation */
+.nav-logo {
+    display: none; /* Hidden by default */
+    align-items: center;
+    margin-right: auto; /* Push navigation buttons to the right */
+    padding-left: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-logo img {
+    height: 28px;
+    width: auto;
+}
+
+.nav-logo-text {
+    color: var(--light-text);
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-left: 8px;
+    letter-spacing: 1px;
+}
+
+/* Show logo when navigation bar has scrolled class */
+.button-nav.scrolled .nav-logo {
+    display: flex;
+    opacity: 1;
+}
+
+
+/* Tactical Scene Animation Settings */
+
 .tactical-scene {
     background: url('assets/backgrounds/plane_crash.jpg') center/cover no-repeat;
     position: relative;
