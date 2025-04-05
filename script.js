@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Robots initial positions
         const drones = [
-            { x: 20, y: 20, id: 'drone1' },
+            { x: 50, y: 20, id: 'drone1' },
             { x: 80, y: 20, id: 'drone2' },
             { x: 20, y: 80, id: 'drone3' },
             { x: 80, y: 80, id: 'drone4' }
@@ -191,24 +191,80 @@ document.addEventListener('DOMContentLoaded', function() {
             scene.appendChild(infoPanel);
         });
 
-        // Create drones
-        drones.forEach(drone => {
-            const droneEl = document.createElement('div');
-            droneEl.className = 'drone';
-            droneEl.id = drone.id;
-            droneEl.style.left = `${drone.x}%`;
-            droneEl.style.top = `${drone.y}%`;
-            scene.appendChild(droneEl);
-        });
-
         // Create quadrupeds
         quadrupeds.forEach(quad => {
+            // Create coverage area first
+            const coverageArea = document.createElement('div');
+            coverageArea.className = 'quadruped-coverage'; // Using a different class for styling if needed
+            coverageArea.id = `${quad.id}-coverage`;
+            coverageArea.style.left = `${quad.x}%`;
+            coverageArea.style.top = `${quad.y}%`;
+            coverageArea.style.width = '80px'; // Smaller coverage than drones
+            coverageArea.style.height = '80px';
+            scene.appendChild(coverageArea);
+            
+            // Create the quadruped element
             const quadEl = document.createElement('div');
             quadEl.className = 'quadruped';
             quadEl.id = quad.id;
             quadEl.style.left = `${quad.x}%`;
             quadEl.style.top = `${quad.y}%`;
             scene.appendChild(quadEl);
+            
+            // Create the icon container
+            const iconContainer = document.createElement('div');
+            iconContainer.className = 'robot-icon-container quadruped-icon'; // Adding a specific class for quadruped icons
+            iconContainer.id = `${quad.id}-icon`;
+            iconContainer.style.left = `${quad.x}%`;
+            iconContainer.style.top = `${quad.y}%`;
+            
+            // Create the icon image
+            const iconImg = document.createElement('img');
+            iconImg.className = 'robot-icon';
+            iconImg.src = 'assets/icons/quadruped.png'; // Update with your actual path
+            iconImg.alt = 'Quadruped';
+            
+            // Append image to container, and container to scene
+            iconContainer.appendChild(iconImg);
+            scene.appendChild(iconContainer);
+        });
+
+        
+
+        // Create drones
+        drones.forEach(drone => {
+            const coverageArea = document.createElement('div');
+            coverageArea.className = 'drone-coverage';
+            coverageArea.id = `${drone.id}-coverage`;
+            coverageArea.style.left = `${drone.x}%`;
+            coverageArea.style.top = `${drone.y}%`;
+            coverageArea.style.width = '100px'; // Coverage diameter - adjust as needed
+            coverageArea.style.height = '100px'; // Same as width for a perfect circle
+            scene.appendChild(coverageArea);
+
+            const droneEl = document.createElement('div');
+            droneEl.className = 'drone';
+            droneEl.id = drone.id;
+            droneEl.style.left = `${drone.x}%`;
+            droneEl.style.top = `${drone.y}%`;
+            scene.appendChild(droneEl);
+            
+            // Add this new code to create the icon container
+            const iconContainer = document.createElement('div');
+            iconContainer.className = 'robot-icon-container';
+            iconContainer.id = `${drone.id}-icon`;
+            iconContainer.style.left = `${drone.x}%`;
+            iconContainer.style.top = `${drone.y}%`;
+            
+            // Create the icon image
+            const iconImg = document.createElement('img');
+            iconImg.className = 'robot-icon';
+            iconImg.src = 'assets/icons/drone.png'; // Updated with the correct path
+            iconImg.alt = 'Drone';
+            
+            // Append image to container, and container to scene
+            iconContainer.appendChild(iconImg);
+            scene.appendChild(iconContainer);
         });
 
         // Create connection lines
@@ -257,7 +313,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Animate drones
             drones.forEach((drone, index) => {
                 const droneEl = document.getElementById(drone.id);
-                if (!droneEl) return;
+                const iconEl = document.getElementById(`${drone.id}-icon`);
+                const coverageEl = document.getElementById(`${drone.id}-coverage`); // Get coverage element
+                
+                if (!droneEl || !iconEl || !coverageEl) return; // Check if all elements exist
 
                 // Create circular motion with different phases
                 const time = Date.now() / 1000;
@@ -266,8 +325,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 const newX = drone.x + Math.sin(angle * Math.PI / 180) * radius;
                 const newY = drone.y + Math.cos(angle * Math.PI / 180) * radius;
 
+                // Update positions of all elements
                 droneEl.style.left = `${newX}%`;
                 droneEl.style.top = `${newY}%`;
+                
+                iconEl.style.left = `${newX}%`;
+                iconEl.style.top = `${newY}%`;
+                
+                coverageEl.style.left = `${newX}%`; // Update coverage area position
+                coverageEl.style.top = `${newY}%`;
 
                 // Show info panels when drones are near casualties
                 casualties.forEach((cas, casIndex) => {
@@ -328,7 +394,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Animate quadrupeds
             quadrupeds.forEach((quad, index) => {
                 const quadEl = document.getElementById(quad.id);
-                if (!quadEl) return;
+                const iconEl = document.getElementById(`${quad.id}-icon`);
+                const coverageEl = document.getElementById(`${quad.id}-coverage`);
+                
+                if (!quadEl || !iconEl || !coverageEl) return; // Check if all elements exist
 
                 // Move quadrupeds towards nearest casualty based on time
                 const targetCasualty = casualties[index % casualties.length];
@@ -338,8 +407,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 const newX = quad.x + (targetCasualty.x - quad.x) * progress;
                 const newY = quad.y + (targetCasualty.y - quad.y) * progress;
 
+                // Update positions of all elements
                 quadEl.style.left = `${newX}%`;
                 quadEl.style.top = `${newY}%`;
+                
+                iconEl.style.left = `${newX}%`;
+                iconEl.style.top = `${newY}%`;
+                
+                coverageEl.style.left = `${newX}%`;
+                coverageEl.style.top = `${newY}%`;
             });
 
             // Remove old connection lines
