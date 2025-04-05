@@ -218,6 +218,15 @@ section {
     overflow: hidden;
 }
 
+.tactical-scene {
+    background: url('assets/backgrounds/plane_crash.jpg') center/cover no-repeat;
+    position: relative;
+    padding-top: 60px; /* Account for fixed navigation */
+    padding-bottom: 60px;
+    height: 70vh; /* Maintain consistent height */
+    overflow: hidden;
+}
+
 
 .casualty {
     position: absolute;
@@ -385,7 +394,7 @@ section {
 
 .control-center {
     position: absolute;
-    bottom: 200px; /* Moved up to be above the sponsors bar */
+    bottom: 20px; /* Position at bottom of tactical scene */
     left: 20px;
     background-color: rgba(71, 68, 47, 0.7);
     border: 1px solid var(--dark-camel);
@@ -394,7 +403,9 @@ section {
     display: flex;
     flex-direction: column;
     min-width: 200px;
-    z-index: 200; /* Ensure it's above the sponsors bar */
+    z-index: 200;
+    transform: none;
+    margin: 0;
 }
 
 .control-center h3 {
@@ -421,93 +432,90 @@ section {
 
 /* Sponsors Carousel */
 .sponsors-section {
-    position: relative; /* Changed from absolute positioning */
+    position: relative;
     background-color: rgba(71, 68, 47, 0.85);
-    padding: 20px 0;
+    padding: 10px 0; /* Reduced top/bottom padding */
     border-top: 1px solid var(--dark-camel);
     border-bottom: 1px solid var(--dark-camel);
+    width: 100%;
     z-index: 100;
 }
 
 .sponsors-container {
-    display: flex;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.sponsors-text {
-    flex: 0 0 35%;
-    padding-right: 40px;
+.sponsors-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px; /* Reduced from 15px */
 }
 
-.sponsors-text h2 {
-    color: var(--medic-red);
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.sponsors-text p {
+.sponsors-header .subtle-heading {
     color: var(--light-camel);
-    line-height: 1.5;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-}
-
-.sponsor-recognition {
-    margin-top: 15px;
+    font-size: 0.95rem;
+    margin-right: 15px;
     font-style: italic;
-    border-left: 3px solid var(--medic-red);
-    padding-left: 15px;
-    font-size: 0.85rem;
+    opacity: 0.8;
+    flex-shrink: 0;
 }
 
-.sponsors-carousel {
-    flex: 0 0 65%;
+.sponsors-header .divider {
+    height: 1px;
+    background-color: var(--dark-camel);
+    flex-grow: 1;
+    opacity: 0.5;
+}
+
+.carousel-outer {
     position: relative;
-}
-
-.carousel-container {
-    width: 100%;
     overflow: hidden;
-    position: relative;
-    border-radius: 8px;
-    background-color: rgba(214, 205, 182, 0.05);
-    border: 1px solid var(--dark-camel);
-    padding: 20px;
+    width: 100%;
+    padding: 3px 0; /* Reduced vertical padding */
 }
 
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s linear;
     position: relative;
+    will-change: transform;
 }
 
 .carousel-slide {
-    flex: 0 0 calc(33.333% - 20px);
-    margin: 0 10px;
+    flex-shrink: 0;
+    padding: 0 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
     opacity: 0.8;
     transition: opacity 0.3s ease;
     position: relative;
+}
+
+.carousel-slide.tier-1 {
+    height: 70px; /* Reduced height */
+    min-width: 220px;
+}
+
+.carousel-slide.tier-2 {
+    height: 60px; /* Reduced height */
+    min-width: 180px;
+}
+
+.carousel-slide.tier-3 {
+    height: 50px; /* Reduced height */
+    min-width: 150px;
 }
 
 .carousel-slide:hover {
     opacity: 1;
 }
 
-.carousel-slide.tier-1 {
-    height: 100px;
-}
-
 .carousel-slide img {
-    max-width: 100%;
     max-height: 100%;
+    max-width: 100%;
     object-fit: contain;
     filter: grayscale(30%);
     transition: filter 0.3s ease, transform 0.3s ease;
@@ -518,31 +526,76 @@ section {
     transform: scale(1.05);
 }
 
-.carousel-controls {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-/* Update control center positioning */
-.control-center {
+.carousel-slide .sponsor-name {
     position: absolute;
-    bottom: 20px; /* Position at bottom of tactical scene */
-    left: 20px;
-    background-color: rgba(71, 68, 47, 0.7);
-    border: 1px solid var(--dark-camel);
-    border-radius: 5px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    min-width: 200px;
-    z-index: 200;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 0.75rem;
+    color: var(--light-camel);
+    white-space: nowrap;
 }
 
-.carousel-control:hover {
-    background-color: var(--light-camel);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.carousel-slide:hover .sponsor-name {
+    opacity: 1;
+}
+
+.gradient-overlay-left,
+.gradient-overlay-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.gradient-overlay-left {
+    left: 0;
+    background: linear-gradient(to right, rgba(71, 68, 47, 1), rgba(71, 68, 47, 0));
+}
+
+.gradient-overlay-right {
+    right: 0;
+    background: linear-gradient(to left, rgba(71, 68, 47, 1), rgba(71, 68, 47, 0));
+}
+
+.sponsor-tagline {
+    text-align: right;
+    font-style: italic;
+    font-size: 0.75rem; /* Slightly smaller font */
+    color: var(--light-camel);
+    margin-top: 3px; /* Reduced margin */
+    opacity: 0.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-slide.tier-1 {
+        height: 80px;
+        min-width: 180px;
+    }
+    
+    .carousel-slide.tier-2 {
+        height: 70px;
+        min-width: 150px;
+    }
+    
+    .carousel-slide.tier-3 {
+        height: 60px;
+        min-width: 130px;
+    }
+    
+    .gradient-overlay-left,
+    .gradient-overlay-right {
+        width: 30px;
+    }
+    
+    .sponsors-container {
+        padding: 0 15px;
+    }
 }
 
 /* Footer */

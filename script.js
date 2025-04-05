@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Initialize both components
                     initTacticalScene();
                     initButtonNav();
-                    initCarousel();
+                    initSponsorCarousel();
                 }, 500);
             }, 500);
         }
@@ -446,54 +446,100 @@ document.addEventListener('DOMContentLoaded', function() {
         animateScene();
     }
 
-    // Carousel auto-rotation function
-    function initCarousel() {
+    // Sponsor Carousel Implementation
+    function initSponsorCarousel() {
         const carouselTrack = document.getElementById('carousel-track');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-
-        // Check if carousel elements exist
-        if (!carouselTrack || !prevBtn || !nextBtn) return;
+        if (!carouselTrack) return;
 
         // Get all slides
-        const slides = carouselTrack.querySelectorAll('.carousel-slide');
-        if (slides.length === 0) return;
+        const originalSlides = Array.from(carouselTrack.querySelectorAll('.carousel-slide'));
+        if (originalSlides.length === 0) return;
 
-        // Calculate the width of one slide (including margins)
-        const slideWidth = slides[0].offsetWidth + 20; // 20px for margins (10px on each side)
+        // Clone slides and append to create circular effect
+        originalSlides.forEach(slide => {
+            const clone = slide.cloneNode(true);
+            carouselTrack.appendChild(clone);
+        });
 
-        // Variables to track position
-        let position = 0;
-        const visibleSlides = 3; // Number of slides visible at once
-        const totalSlides = slides.length;
-
-        // Function to move to next slide
-        function moveToNextSlide() {
-            position++;
-            // Reset to beginning when reaching the end
-            if (position >= totalSlides - visibleSlides + 1) {
-                position = 0;
-            }
-            carouselTrack.style.transform = `translateX(-${position * slideWidth}px)`;
+        // Variables
+        const totalSlides = originalSlides.length;
+        let currentPosition = 0;
+        let animationFrame;
+        let isPaused = false;
+        
+        // Function to calculate slide widths
+        function getSlideWidth(index) {
+            return originalSlides[index % totalSlides].offsetWidth + 
+                parseInt(window.getComputedStyle(originalSlides[index % totalSlides]).paddingLeft) +
+                parseInt(window.getComputedStyle(originalSlides[index % totalSlides]).paddingRight);
         }
-
-        // Set up auto-rotation at 300ms interval
-        const autoRotateInterval = setInterval(moveToNextSlide, 800);
-
-        // Manual control buttons
-        prevBtn.addEventListener('click', function() {
-            clearInterval(autoRotateInterval); // Stop auto-rotation when manual control is used
-            position--;
-            if (position < 0) {
-                position = totalSlides - visibleSlides;
+        
+        // Calculate total width of all original slides
+        function getTotalWidth() {
+            let width = 0;
+            for (let i = 0; i < totalSlides; i++) {
+                width += getSlideWidth(i);
             }
-            carouselTrack.style.transform = `translateX(-${position * slideWidth}px)`;
+            return width;
+        }
+        
+        // Animate function for smooth scrolling
+        function animate() {
+            if (!isPaused) {
+                // Move by a small pixel amount each frame for smooth scrolling
+                currentPosition += 0.5;
+                
+                // If we've moved past the first set of slides
+                if (currentPosition >= getTotalWidth()) {
+                    // Reset to start
+                    currentPosition = 0;
+                }
+                
+                // Apply the transform
+                carouselTrack.style.transform = `translateX(-${currentPosition}px)`;
+            }
+            
+            animationFrame = requestAnimationFrame(animate);
+        }
+        
+        // Start animation
+        animate();
+        
+        // Pause on hover
+        carouselTrack.parentElement.addEventListener('mouseenter', () => {
+            isPaused = true;
         });
 
-        nextBtn.addEventListener('click', function() {
-            clearInterval(autoRotateInterval); // Stop auto-rotation when manual control is used
-            moveToNextSlide();
+        carouselTrack.parentElement.addEventListener('mouseleave', () => {
+            isPaused = false;
         });
+
+        // Add sponsor names that appear on hover
+        document.querySelectorAll('.carousel-slide').forEach(slide => {
+            if (!slide.querySelector('.sponsor-name')) {
+                const img = slide.querySelector('img');
+                if (img && img.alt) {
+                    const sponsorName = document.createElement('span');
+                    sponsorName.className = 'sponsor-name';
+                    sponsorName.textContent = img.alt;
+                    slide.appendChild(sponsorName);
+                }
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            // Recalculate slide widths if window size changes
+            if (currentPosition >= getTotalWidth()) {
+                currentPosition = 0;
+                carouselTrack.style.transform = `translateX(0)`;
+            }
+        });
+
+        // Clean up function
+        return () => {
+            cancelAnimationFrame(animationFrame);
+        };
     }
 
 });
