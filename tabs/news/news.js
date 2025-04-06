@@ -19,7 +19,7 @@ const newsItems = [
         title: 'CMU, Pitt robots race to save lives in DARPA contest',
         date: 'March 24, 2025',
         excerpt: 'Researchers at Carnegie Mellon University and the University of Pittsburgh are teaming up to compete in a Department of Defense contest to use robotics and AI to help advance global emergency response efforts.',
-        thumbnail: 'assets/news/CMU, Pitt robots race to save lives in DARPA contest.webp'
+        thumbnail: 'tabs/news/assets/CMU, Pitt robots race to save lives in DARPA contest.webp'
     },
     {
         type: 'article',
@@ -27,7 +27,7 @@ const newsItems = [
         title: 'PIT\'s Fire Training Facility Serves as a Testing Ground for Life-Saving Technology',
         date: 'March 24, 2025',
         excerpt: 'Pittsburgh International Airport\'s ARFF Training Facility recently hosted autonomous robots and drones from CMU and Pitt that can identify human injuries from up to 10 meters away, notifying first responders about victims who need immediate triage.',
-        thumbnail: 'assets/news/PIT’s Fire Training Facility Serves as a Testing Ground for Life-Saving Technology.webp'
+        thumbnail: 'tabs/news/assets/PIT’s Fire Training Facility Serves as a Testing Ground for Life-Saving Technology.webp'
     }
 ];
 

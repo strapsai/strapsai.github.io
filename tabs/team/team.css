@@ -1,0 +1,403 @@
+/* Team Page Specific Styles */
+
+/* Header Section */
+.team-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/backgrounds/team_header_bg.jpg') center/cover no-repeat;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px; /* Account for fixed nav */
+    position: relative;
+    overflow: hidden;
+}
+
+.team-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, transparent 20%, rgba(71, 68, 47, 0.4) 70%);
+    z-index: 1;
+}
+
+.header-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.header-content h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.header-content p {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid var(--medic-red);
+}
+
+/* Section Containers */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    color: var(--light-text);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.divider {
+    height: 3px;
+    width: 80px;
+    background-color: var(--medic-red);
+    margin: 0 auto;
+}
+
+/* Team Section Styles - Updated to match HTML structure */
+.team-section {
+    padding: 80px 0;
+    background-color: var(--dark-bg);
+}
+
+/* Team Grid - Smaller cards to fit more in a row */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.team-member {
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.member-card {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.member-image {
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 1 / 1;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.member-card:hover .member-image img {
+    transform: scale(1.05);
+}
+
+.member-info {
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.member-info h3 {
+    color: var(--light-text);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.member-role {
+    color: var(--medic-red);
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.member-position {
+    color: var(--light-camel);
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.member-affiliation {
+    color: var(--light-text);
+    font-size: 0.75rem;
+    opacity: 0.7;
+    margin-top: auto;
+    margin-bottom: 8px;
+}
+
+/* Social Media Icons */
+.member-social {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.member-social a {
+    color: var(--light-text);
+    font-size: 0.9rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.member-social a:hover {
+    color: var(--medic-red);
+    transform: translateY(-3px);
+}
+
+/* Team Areas/Expertise Section */
+.team-areas-section {
+    padding: 80px 0;
+    background-color: rgba(60, 58, 40, 0.8);
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.expertise-area {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    border-top: 3px solid var(--medic-red);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.expertise-area:hover {
+    transform: translateY(-10px);
+}
+
+.expertise-icon {
+    color: var(--medic-red);
+    margin-bottom: 20px;
+}
+
+.expertise-area h3 {
+    color: var(--light-text);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.expertise-area p {
+    color: var(--light-camel);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Join Us Section */
+.join-section {
+    padding: 80px 0;
+    background-color: var(--dark-bg);
+}
+
+.join-description {
+    text-align: center;
+    color: var(--light-text);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.opportunities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.opportunity-card {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+    border-bottom: 3px solid var(--medic-red);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.opportunity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.opportunity-card h3 {
+    color: var(--light-text);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.opportunity-card p {
+    color: var(--light-camel);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.btn-opportunity {
+    display: inline-block;
+    background-color: var(--army-camel);
+    color: var(--dark-bg);
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-opportunity:hover {
+    background-color: var(--medic-red);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation Classes */
+.section-visible .team-member,
+.section-visible .expertise-area,
+.section-visible .opportunity-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animation for team members and cards */
+.section-visible .team-member:nth-child(1),
+.section-visible .expertise-area:nth-child(1),
+.section-visible .opportunity-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.section-visible .team-member:nth-child(2),
+.section-visible .expertise-area:nth-child(2),
+.section-visible .opportunity-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.section-visible .team-member:nth-child(3),
+.section-visible .expertise-area:nth-child(3),
+.section-visible .opportunity-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.section-visible .team-member:nth-child(4),
+.section-visible .expertise-area:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+/* Additional animation optimization */
+.team-member, 
+.expertise-area, 
+.opportunity-card {
+    will-change: transform, opacity;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    
+    .expertise-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .member-image {
+        aspect-ratio: 4/3;
+    }
+    
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .button-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-button {
+        margin: 5px;
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    
+    .nav-logo img {
+        height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    
+    .team-section, 
+    .team-areas-section,
+    .join-section {
+        padding: 50px 0;
+    }
+    
+    .expertise-grid,
+    .opportunities-grid {
+        grid-template-columns: 1fr;
+    }
+}

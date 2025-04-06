@@ -95,20 +95,34 @@ document.addEventListener('DOMContentLoaded', function() {
         const scene = document.getElementById('scene');
 
         // Set "About Us" as initially active
-        if (navButtons.length > 0) {
+        if (navButtons.length > 0 && window.location.pathname.indexOf('robots.html') === -1) {
             navButtons[0].classList.add('active');
         }
 
         // Handle button clicks
         navButtons.forEach(button => {
             button.addEventListener('click', function(e) {
-                e.preventDefault();
+                const href = this.getAttribute('href');
+                
+                // Only prevent default for same-page links (starting with #)
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
 
-                // Remove active class from all buttons
-                navButtons.forEach(btn => btn.classList.remove('active'));
+                    // Remove active class from all buttons
+                    navButtons.forEach(btn => btn.classList.remove('active'));
 
-                // Add active class to clicked button
-                this.classList.add('active');
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Scroll to the anchor if it exists on this page
+                    const targetId = href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+                // For external links, allow default navigation behavior
+                // No preventDefault() means the browser will navigate to the href
             });
         });
 

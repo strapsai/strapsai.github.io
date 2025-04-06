@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robots | CHIRON - Making remote autonomous triage a reality</title>
+
+    <!-- Simple Favicon -->
+    <link rel="icon" href="../../assets/logo/chiron/icon/chiron-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/logo/chiron/icon/chiron-icon.png" type="image/x-icon">
+
+    <!-- Main stylesheet reference -->
+    <link rel="stylesheet" href="../../style.css">
+    
+    <!-- Robots specific stylesheet -->
+    <link rel="stylesheet" href="robots.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-container">
+            <div class="medic-icon">
+                <div class="medic-circle"></div>
+                <div class="medic-cross-vertical"></div>
+                <div class="medic-cross-horizontal"></div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="loading-text">
+                <p>Loading robot data...</p>
+                <p id="loading-percentage">0%</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- News bar -->
+    <div id="news-ticker">
+        <div class="news-ticker-container">
+            <div class="news-ticker-label">LATEST UPDATE</div>
+            <div class="news-ticker-content">
+                <div class="news-alert">
+                    <span>Team Chiron qualifies for the Year 2 challenge in the DARPA Triage Challenge.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content - Hidden Initially -->
+    <div id="main-content" class="hidden">
+        <nav class="button-nav">
+            <div class="nav-logo">
+                <img src="../../assets/logo/chiron/png/CMU_TeamChiron_RedWht.png" alt="Chiron">
+            </div>
+            <a href="../../index.html#about" class="nav-button">About Us</a>
+            <a href="../tech_and_research/tech_and_research.html" class="nav-button">Tech & Research</a>
+            <a href="../../index.html#team" class="nav-button">Team</a>
+            <a href="robots.html" class="nav-button active">Robots</a>
+            <a href="../../index.html#news" class="nav-button">News</a>
+            <a href="../../index.html#sponsors" class="nav-button">Sponsors</a>
+        </nav>
+
+        <!-- Robots Header Section -->
+        <section class="robots-header" id="robots">
+            <div class="header-content">
+                <h1>Advanced Robot Team</h1>
+                <p>Coordinated aerial and ground robotic teams leveraging AI-driven team intelligence for real-time casualty detection, triage assessment, and mission-critical decision support in high-risk environments.</p>
+            </div>
+        </section>
+
+        <!-- Robots Overview Section -->
+        <section class="robots-overview">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Our Robot Fleet</h2>
+                    <div class="divider"></div>
+                </div>
+                <p class="overview-text">CHIRON's robotic system combines aerial reconnaissance capabilities with ground-based detailed assessment, all managed through an intelligent central command system. Our robots work in coordination to rapidly locate, assess, and prioritize casualties in challenging environments.</p>
+            </div>
+        </section>
+
+        <!-- Aerial Robots Section -->
+        <section class="robot-section" id="aerial">
+            <div class="robot-container">
+                <div class="robot-image">
+                    <img src="assets/drone_with_payload.jpg" alt="CHIRON Aerial Drone">
+                    <div class="image-badge">Aerial Reconnaissance</div>
+                </div>
+                <div class="robot-info">
+                    <h3>CHIRON Scout Drone</h3>
+                    <p>Our aerial reconnaissance platform equipped with advanced sensors for casualty detection and initial assessment from above. These drones can quickly survey large areas and identify potential casualties, providing crucial information to the ground team.</p>
+                    
+                    <div class="capability-tags">
+                        <span class="capability-tag">Rapid Area Coverage</span>
+                        <span class="capability-tag">Thermal Detection</span>
+                        <span class="capability-tag">Onboard AI Processing</span>
+                        <span class="capability-tag">Autonomous Navigation</span>
+                        <span class="capability-tag">Real-time Casualty Identification</span>
+                    </div>
+                    
+                    <div class="specs-table">
+                        <h4>Technical Specifications</h4>
+                        <div class="spec-row">
+                            <div class="spec-label">Flight Time</div>
+                            <div class="spec-value">45 minutes</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Operating Range</div>
+                            <div class="spec-value">2 km</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Max Speed</div>
+                            <div class="spec-value">15 m/s</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Sensors</div>
+                            <div class="spec-value">4K camera, thermal imaging, LiDAR</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Computing</div>
+                            <div class="spec-value">NVIDIA Jetson Xavier NX</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ground Robots Section -->
+        <section class="robot-section alt-section" id="ground">
+            <div class="robot-container reversed">
+                <div class="robot-info">
+                    <h3>CHIRON Quadruped Responder</h3>
+                    <p>Our ground-based quadruped robot is designed to navigate challenging terrain and reach casualties for detailed assessment. Based on advanced legged robotics technology, we've equipped it with specialized sensors and a manipulation arm for close-range casualty assessment.</p>
+                    
+                    <div class="capability-tags">
+                        <span class="capability-tag">All-Terrain Navigation</span>
+                        <span class="capability-tag">Vital Sign Assessment</span>
+                        <span class="capability-tag">Medical Manipulation</span>
+                        <span class="capability-tag">Obstacle Traversal</span>
+                        <span class="capability-tag">Close-Range Assessment</span>
+                    </div>
+                    
+                    <div class="specs-table">
+                        <h4>Technical Specifications</h4>
+                        <div class="spec-row">
+                            <div class="spec-label">Battery Life</div>
+                            <div class="spec-value">90 minutes</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Speed</div>
+                            <div class="spec-value">1.6 m/s</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Payload</div>
+                            <div class="spec-value">14 kg</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Sensors</div>
+                            <div class="spec-value">360° cameras, depth sensing, medical sensors</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Manipulation</div>
+                            <div class="spec-value">6-DOF robotic arm</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="robot-image">
+                    <img src="assets/spot_with_payload.jpg" alt="CHIRON Quadruped Robot">
+                    <div class="image-badge">Ground Assessment</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Command System Section -->
+        <section class="robot-section" id="command">
+            <div class="robot-container">
+                <div class="robot-image">
+                    <img src="assets/chiron_station.gif" alt="CHIRON Command System">
+                    <div class="image-badge">Mission Control</div>
+                </div>
+                <div class="robot-info">
+                    <h3>CHIRON Command System</h3>
+                    <p>Our central command and control platform coordinates all robots in the field and processes the information they collect. This system serves as the nerve center for the entire operation, providing first responders with actionable intelligence for optimal resource allocation.</p>
+                    
+                    <div class="capability-tags">
+                        <span class="capability-tag">Data Fusion</span>
+                        <span class="capability-tag">AI Triage</span>
+                        <span class="capability-tag">Tactical Mapping</span>
+                        <span class="capability-tag">Resource Optimization</span>
+                        <span class="capability-tag">Situational Awareness</span>
+                    </div>
+                    
+                    <div class="specs-table">
+                        <h4>Technical Specifications</h4>
+                        <div class="spec-row">
+                            <div class="spec-label">Computing</div>
+                            <div class="spec-value">High-performance edge server with GPU</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Interface</div>
+                            <div class="spec-value">Ruggedized touchscreen tablet</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Connectivity</div>
+                            <div class="spec-value">Mesh network with redundant communication</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Runtime</div>
+                            <div class="spec-value">8+ hours on battery, unlimited with external power</div>
+                        </div>
+                        <div class="spec-row">
+                            <div class="spec-label">Setup Time</div>
+                            <div class="spec-value">Under 5 minutes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- Footer with contact links -->
+        <footer class="contact-footer">
+            <div class="footer-content">
+                <div class="contact-links">
+                    <h3>Contact Us</h3>
+                    <a href="mailto:info@chiron-project.org">Email</a>
+                    <a href="#social-media">Social Media</a>
+                    <a href="#press">Press Inquiries</a>
+                    <a href="#careers">Careers</a>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 CHIRON Project. All rights reserved.</p>
+                    <p>A CMU DARPA Triage Challenge Initiative</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script src="robots.js"></script>
+</body>
+</html>

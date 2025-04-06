@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | CHIRON - Making remote autonomous triage a reality</title>
+    <!-- Simple Favicon -->
+    <link rel="icon" href="../../assets/logo/chiron/icon/chiron-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/logo/chiron/icon/chiron-icon.png" type="image/x-icon">
+    <!-- Main stylesheet reference -->
+    <link rel="stylesheet" href="../../style.css">
+    <!-- Team specific stylesheet -->
+    <link rel="stylesheet" href="team.css">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-container">
+            <div class="medic-icon">
+                <div class="medic-circle"></div>
+                <div class="medic-cross-vertical"></div>
+                <div class="medic-cross-horizontal"></div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="loading-text">
+                <p>Loading team profiles...</p>
+                <p id="loading-percentage">0%</p>
+            </div>
+        </div>
+    </div>
+    <!-- News bar -->
+    <div id="news-ticker">
+        <div class="news-ticker-container">
+            <div class="news-ticker-label">LATEST UPDATE</div>
+            <div class="news-ticker-content">
+                <div class="news-alert">
+                    <span>Team Chiron qualifies for the Year 2 challenge in the DARPA Triage Challenge.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content - Hidden Initially -->
+    <div id="main-content" class="hidden">
+        <nav class="button-nav">
+            <div class="nav-logo">
+                <img src="../../assets/logo/chiron/png/CMU_TeamChiron_RedWht.png" alt="Chiron">
+            </div>
+            <a href="../../index.html#about" class="nav-button">About Us</a>
+            <a href="../tech_and_research/tech_and_research.html" class="nav-button">Tech & Research</a>
+            <a href="team.html" class="nav-button active">Team</a>
+            <a href="../robots/robots.html" class="nav-button">Robots</a>
+            <a href="../../index.html#news" class="nav-button">News</a>
+            <a href="../../index.html#sponsors" class="nav-button">Sponsors</a>
+        </nav>
+        <!-- Team Header Section -->
+        <section class="team-header" id="team">
+            <div class="header-content">
+                <h1>The Team</h1>
+                <p>Team Chiron consists of professors, physicians, researchers, and students with a wide range of experience in robotics and medicine</p>
+            </div>
+        </section>
+        
+        <!-- Team Section - All members in one section -->
+        <section class="team-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Our Team</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="team-grid">
+                    <!-- Leadership Row 1 -->
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <a href="https://www.linkedin.com/in/kimberly-elenberg-0b52a595" target="_blank">
+                                    <img src="assets/elenberg.jpg" alt="Kimberly Elenberg">
+                                </a>
+                            </div>
+                            <div class="member-info">
+                                <h3>Kimberly Elenberg</h3>
+                                <div class="member-role">PI, Functional SME</div>
+                                <div class="member-position">DNP, Informatics</div>
+                                <div class="member-affiliation">Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="https://www.linkedin.com/in/kimberly-elenberg-0b52a595" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <a href="https://www.theairlab.org" target="_blank">
+                                    <img src="assets/basti.jpeg" alt="Sebastian Scherer">
+                                </a>
+                            </div>
+                            <div class="member-info">
+                                <h3>Sebastian Scherer</h3>
+                                <div class="member-role">Co-PI Sensor Pack</div>
+                                <div class="member-position">Associate Research Professor</div>
+                                <div class="member-affiliation">AirLab, Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="https://www.linkedin.com/in/sebastian-scherer-7a6b801/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://www.theairlab.org" target="_blank"><i class="fas fa-globe"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <a href="https://www.ri.cmu.edu/ri-faculty/john-galeotti/" target="_blank">
+                                    <img src="assets/jgaleotti.jpg" alt="John Galeotti">
+                                </a>
+                            </div>
+                            <div class="member-info">
+                                <h3>John Galeotti</h3>
+                                <div class="member-role">Co-PI Vision</div>
+                                <div class="member-position">Robotics</div>
+                                <div class="member-affiliation">Biomedical Image Guidance Lab, Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="https://www.linkedin.com/in/john-galeotti/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://www.ri.cmu.edu/ri-faculty/john-galeotti/" target="_blank"><i class="fas fa-globe"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <a href="https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/" target="_blank">
+                                    <img src="assets/dubrawski_artur.jpg" alt="Artur Dubrawski">
+                                </a>
+                            </div>
+                            <div class="member-info">
+                                <h3>Artur Dubrawski</h3>
+                                <div class="member-role">Co-PI AI, Data Analysis</div>
+                                <div class="member-position">PhD Robotics & AI</div>
+                                <div class="member-affiliation">AutonLab, Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="https://www.linkedin.com/in/artur-dubrawski/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/" target="_blank"><i class="fas fa-globe"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <a href="https://www.laszlojeni.com/" target="_blank">
+                                    <img src="assets/Laszlo-Jeni.png" alt="Laszlo Jeni">
+                                </a>
+                            </div>
+                            <div class="member-info">
+                                <h3>Laszlo Jeni</h3>
+                                <div class="member-role">Co-PI Vision</div>
+                                <div class="member-position">Robotics</div>
+                                <div class="member-affiliation">CUBE Lab, Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="https://www.linkedin.com/in/laszlo-jeni/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://www.laszlojeni.com/" target="_blank"><i class="fas fa-globe"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <a href="https://www.cs.cmu.edu/~srinivas/" target="_blank">
+                                    <img src="assets/srinivasa.jpeg" alt="Srinivasa Narasimhan">
+                                </a>
+                            </div>
+                            <div class="member-info">
+                                <h3>Srinivasa Narasimhan</h3>
+                                <div class="member-role">Co-PI Vision</div>
+                                <div class="member-position">Computer Science and Engineering</div>
+                                <div class="member-affiliation">ILIM Lab, Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="https://www.linkedin.com/in/srinivasa-narasimhan-8b5a961/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://www.cs.cmu.edu/~srinivas/" target="_blank"><i class="fas fa-globe"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <a href="https://www.emergencymedicine.pitt.edu/people/leonard-weiss" target="_blank">
+                                    <img src="assets/lenny weiss_0.jpg" alt="Lenny Weiss">
+                                </a>
+                            </div>
+                            <div class="member-info">
+                                <h3>Lenny Weiss</h3>
+                                <div class="member-role">Co-PI Medical</div>
+                                <div class="member-position">Medical Doctor</div>
+                                <div class="member-affiliation">University of Pittsburgh</div>
+                                <div class="member-social">
+                                    <a href="https://www.linkedin.com/in/leonard-weiss-md/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://www.emergencymedicine.pitt.edu/people/leonard-weiss" target="_blank"><i class="fas fa-globe"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Postdocs & Staffs -->                     
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/huyaoyu.jpeg" alt="Yaoyu Hu">
+                            </div>
+                            <div class="member-info">
+                                <h3>Yaoyu Hu</h3>
+                                <div class="member-role">Sensor Pack</div>
+                                <div class="member-position">Mechanical Doctor</div>
+                                <div class="member-affiliation">Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/kasireddy.png" alt="Varun Kasireddy">
+                            </div>
+                            <div class="member-info">
+                                <h3>Varun Kasireddy</h3>
+                                <div class="member-role">Postdoc</div>
+                                <div class="member-position">PhD Civil Engineering</div>
+                                <div class="member-affiliation">Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/kabir_kedia.jpeg" alt="Kabir Kedia">
+                            </div>
+                            <div class="member-info">
+                                <h3>Kabir Kedia</h3>
+                                <div class="member-role">Sensor Pack</div>
+                                <div class="member-position">Engineering</div>
+                                <div class="member-affiliation">Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/chi-en_teh.jpeg" alt="Chi-En Teh">
+                            </div>
+                            <div class="member-info">
+                                <h3>Chi-En Teh</h3>
+                                <div class="member-role">Project Scientist</div>
+                                <div class="member-position">PhD Nuclear Physics</div>
+                                <div class="member-affiliation">Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/adi.png" alt="Aditya Rauniyar">
+                            </div>
+                            <div class="member-info">
+                                <h3>Aditya Rauniyar</h3>
+                                <div class="member-role">Scene Understanding and Autonomy</div>
+                                <div class="member-position">Research Engineer</div>
+                                <div class="member-affiliation">Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="https://www.linkedin.com/in/adi32/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/james_emilian.jpg" alt="James Emilian">
+                            </div>
+                            <div class="member-info">
+                                <h3>James Emilian</h3>
+                                <div class="member-role">Vision & Vitals (MS Research Student)</div>
+                                <div class="member-position">Biomedical Engineering / Robotics</div>
+                                <div class="member-affiliation">Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="https://www.linkedin.com/in/james-emilian/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/Merritt Kowaleski.jpeg" alt="Merritt Kowaleski">
+                            </div>
+                            <div class="member-info">
+                                <h3>Merritt Kowaleski</h3>
+                                <div class="member-role">Data Engineer, T&V</div>
+                                <div class="member-position">BC Mathematics</div>
+                                <div class="member-affiliation">Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/jiahex.jpg" alt="Jiahe Xu">
+                            </div>
+                            <div class="member-info">
+                                <h3>Jiahe Xu</h3>
+                                <div class="member-role">Sensor Pack</div>
+                                <div class="member-position">MS Robotics</div>
+                                <div class="member-affiliation">Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PhD Students -->
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/parv_maheshwari.jpg" alt="Parv Maheshwari">
+                            </div>
+                            <div class="member-info">
+                                <h3>Parv Maheshwari</h3>
+                                <div class="member-role">Robot Navigation</div>
+                                <div class="member-position">Robotics PhD, MS Mathematics and Computing</div>
+                                <div class="member-affiliation">Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/Ceci Morales.jpg" alt="Ceci Morales">
+                            </div>
+                            <div class="member-info">
+                                <h3>Ceci Morales</h3>
+                                <div class="member-role">Vision, AI</div>
+                                <div class="member-position">PhD student, MS Robotics</div>
+                                <div class="member-affiliation">Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/Bowen Li.jpg" alt="Bowen Li">
+                            </div>
+                            <div class="member-info">
+                                <h3>Bowen Li</h3>
+                                <div class="member-role">Autonomy</div>
+                                <div class="member-position">PhD Robotics</div>
+                                <div class="member-affiliation">Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <!-- Masters Students -->
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/mayankmishra.jpg" alt="Mayank Mishra">
+                            </div>
+                            <div class="member-info">
+                                <h3>Mayank Mishra</h3>
+                                <div class="member-role">Vision</div>
+                                <div class="member-position">MS Robotics</div>
+                                <div class="member-affiliation">Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/Aniket Agarwal.jpg" alt="Aniket Agarwal">
+                            </div>
+                            <div class="member-info">
+                                <h3>Aniket Agarwal</h3>
+                                <div class="member-role">Robotics Vision</div>
+                                <div class="member-position">MS Robotics</div>
+                                <div class="member-affiliation">Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/Rohini Banerjee.jpeg" alt="Rohini Banerjee">
+                            </div>
+                            <div class="member-info">
+                                <h3>Rohini Banerjee</h3>
+                                <div class="member-role">CS, ML</div>
+                                <div class="member-position">MS Computer Science</div>
+                                <div class="member-affiliation">Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+
+                    <!-- Undergraduate Students -->
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/Varun Bhat.jpeg" alt="Varun Bhat">
+                            </div>
+                            <div class="member-info">
+                                <h3>Varun Bhat</h3>
+                                <div class="member-role">Sensor Pack</div>
+                                <div class="member-position">Undergrad ECE</div>
+                                <div class="member-affiliation">Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/Gleb Ryabtsev.jpeg" alt="Gleb Ryabtsev">
+                            </div>
+                            <div class="member-info">
+                                <h3>Gleb Ryabtsev</h3>
+                                <div class="member-role"></div>
+                                <div class="member-position">Undergrad ECE</div>
+                                <div class="member-affiliation">Carnegie Mellon University</div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- External Partners -->
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/placeholder.jpg" alt="Josh Pletz">
+                            </div>
+                            <div class="member-info">
+                                <h3>Josh Pletz</h3>
+                                <div class="member-role"></div>
+                                <div class="member-position"></div>
+                                <div class="member-affiliation">Figure8</div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/placeholder.jpg" alt="Robert">
+                            </div>
+                            <div class="member-info">
+                                <h3>Robert</h3>
+                                <div class="member-role"></div>
+                                <div class="member-position"></div>
+                                <div class="member-affiliation">Figure8</div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/placeholder.jpg" alt="Scott F. Swilley">
+                            </div>
+                            <div class="member-info">
+                                <h3>Scott F. Swilley</h3>
+                                <div class="member-role"></div>
+                                <div class="member-position"></div>
+                                <div class="member-affiliation"></div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-card">
+                            <div class="member-image">
+                                <img src="assets/placeholder.jpg" alt="Vinay">
+                            </div>
+                            <div class="member-info">
+                                <h3>Vinay</h3>
+                                <div class="member-role"></div>
+                                <div class="member-position"></div>
+                                <div class="member-affiliation">Figure8</div>
+                                <div class="member-social">
+                                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Areas Section -->
+        <section class="team-areas-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Our Expertise</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="expertise-grid">
+                    <div class="expertise-area">
+                        <div class="expertise-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 16a4 4 0 100-8 4 4 0 000 8z" />
+                                <path d="M12 2v4" />
+                                <path d="M12 18v4" />
+                                <path d="M4.93 4.93l2.83 2.83" />
+                                <path d="M16.24 16.24l2.83 2.83" />
+                                <path d="M2 12h4" />
+                                <path d="M18 12h4" />
+                                <path d="M4.93 19.07l2.83-2.83" />
+                                <path d="M16.24 7.76l2.83-2.83" />
+                            </svg>
+                        </div>
+                        <h3>Autonomous Robotics</h3>
+                        <p>Our robotics experts develop advanced navigation and perception systems for complex, unstructured environments.</p>
+                    </div>
+
+                    <div class="expertise-area">
+                        <div class="expertise-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2l10 6v8l-10 6-10-6V8l10-6z" />
+                                <path d="M12 22V12" />
+                                <path d="M22 8l-10 4-10-4" />
+                            </svg>
+                        </div>
+                        <h3>Artificial Intelligence</h3>
+                        <p>Our AI researchers develop machine learning models for casualty detection, medical assessment, and triage decision support.</p>
+                    </div>
+
+                    <div class="expertise-area">
+                        <div class="expertise-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <h3>Emergency Medicine</h3>
+                        <p>Our medical professionals provide clinical expertise and validate our systems against established triage protocols and standards.</p>
+                    </div>
+
+                    <div class="expertise-area">
+                        <div class="expertise-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20" />
+                                <path d="M2 12h20" />
+                                <path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10" />
+                            </svg>
+                        </div>
+                        <h3>Systems Integration</h3>
+                        <p>Our systems engineers combine diverse technologies into cohesive, reliable platforms that function effectively in challenging conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Join Us Section -->
+        <section class="join-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Join Our Team</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="join-content">
+                    <p class="join-description">We're always looking for talented researchers, engineers, and students who are passionate about using technology to save lives. If you're interested in being part of our mission, explore our current opportunities.</p>
+
+                    <div class="opportunities-grid">
+                        <div class="opportunity-card">
+                            <h3>Graduate Research</h3>
+                            <p>Join our team as a graduate researcher in robotics, computer vision, or AI for autonomy and medical applications.</p>
+                            <a href="#" class="btn-opportunity">Learn More</a>
+                        </div>
+
+                        <div class="opportunity-card">
+                            <h3>Undergraduate Projects</h3>
+                            <p>Participate in research projects and gain hands-on experience with cutting-edge technology.</p>
+                            <a href="#" class="btn-opportunity">Learn More</a>
+                        </div>
+
+                        <div class="opportunity-card">
+                            <h3>Postdoctoral Positions</h3>
+                            <p>Lead research initiatives in autonomous systems for emergency response and medical applications.</p>
+                            <a href="#" class="btn-opportunity">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer with contact links -->
+        <footer class="contact-footer">
+            <div class="footer-content">
+                <div class="contact-links">
+                    <h3>Contact Us</h3>
+                    <a href="mailto:info@chiron-project.org">Email</a>
+                    <a href="#social-media">Social Media</a>
+                    <a href="#press">Press Inquiries</a>
+                    <a href="#careers">Careers</a>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 CHIRON Project. All rights reserved.</p>
+                    <p>A CMU DARPA Triage Challenge Initiative</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="../../script.js"></script>
+    <script src="team.js"></script>
+</body>
+</html>
+                                    

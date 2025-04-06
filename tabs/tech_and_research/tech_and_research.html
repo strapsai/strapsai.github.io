@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech & Research | CHIRON - Making remote autonomous triage a reality</title>
+
+    <!-- Simple Favicon -->
+    <link rel="icon" href="../../assets/logo/chiron/icon/chiron-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/logo/chiron/icon/chiron-icon.png" type="image/x-icon">
+
+    <!-- Main stylesheet reference -->
+    <link rel="stylesheet" href="../../style.css">
+    
+    <!-- Tech & Research specific stylesheet -->
+    <link rel="stylesheet" href="tech_and_research.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-container">
+            <div class="medic-icon">
+                <div class="medic-circle"></div>
+                <div class="medic-cross-vertical"></div>
+                <div class="medic-cross-horizontal"></div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="loading-text">
+                <p>Loading research data...</p>
+                <p id="loading-percentage">0%</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- News bar -->
+    <div id="news-ticker">
+        <div class="news-ticker-container">
+            <div class="news-ticker-label">LATEST UPDATE</div>
+            <div class="news-ticker-content">
+                <div class="news-alert">
+                    <span>Team Chiron qualifies for the Year 2 challenge in the DARPA Triage Challenge.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content - Hidden Initially -->
+    <div id="main-content" class="hidden">
+        <nav class="button-nav">
+            <div class="nav-logo">
+                <img src="../../assets/logo/chiron/png/CMU_TeamChiron_RedWht.png" alt="Chiron">
+            </div>
+            <a href="../../index.html#about" class="nav-button">About Us</a>
+            <a href="tech_and_research.html" class="nav-button active">Tech & Research</a>
+            <a href="../../index.html#team" class="nav-button">Team</a>
+            <a href="../robots/robots.html" class="nav-button">Robots</a>
+            <a href="../../index.html#news" class="nav-button">News</a>
+            <a href="../../index.html#sponsors" class="nav-button">Sponsors</a>
+        </nav>
+
+        <!-- Tech & Research Header Section -->
+        <section class="tech-header" id="tech">
+            <div class="header-content">
+                <h1>Technology & Research</h1>
+                <p>Advanced AI and robotics research pushing the boundaries of autonomous triage and casualty assessment in high-risk environments.</p>
+            </div>
+        </section>
+
+        <!-- Core Technologies Section -->
+        <section class="core-tech-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Core Technologies</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2l10 6v8l-10 6-10-6V8l10-6z" />
+                                <path d="M12 22V12" />
+                                <path d="M22 8l-10 4-10-4" />
+                            </svg>
+                        </div>
+                        <h3>AI for Medical Assessment</h3>
+                        <p>Real-time injury detection and triage classification using computer vision and deep learning algorithms trained on extensive medical datasets.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Deep Learning</span>
+                            <span class="tech-tag">Medical AI</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <h3>Remote Vital Signs Monitoring</h3>
+                        <p>Non-contact technologies for detecting pulse, respiration, and temperature from a distance, enabling assessment without direct patient contact.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Thermal Imaging</span>
+                            <span class="tech-tag">Motion Analysis</span>
+                            <span class="tech-tag">mmWave Sensing</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 16a4 4 0 100-8 4 4 0 000 8z" />
+                                <path d="M12 2v4" />
+                                <path d="M12 18v4" />
+                                <path d="M4.93 4.93l2.83 2.83" />
+                                <path d="M16.24 16.24l2.83 2.83" />
+                                <path d="M2 12h4" />
+                                <path d="M18 12h4" />
+                                <path d="M4.93 19.07l2.83-2.83" />
+                                <path d="M16.24 7.76l2.83-2.83" />
+                            </svg>
+                        </div>
+                        <h3>Multi-Agent Coordination</h3>
+                        <p>Distributed decision-making algorithms that enable autonomous robots to efficiently coordinate their actions in complex environments.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Swarm Intelligence</span>
+                            <span class="tech-tag">Task Allocation</span>
+                            <span class="tech-tag">Distributed Systems</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <path d="M9 3v18" />
+                                <path d="M15 3v18" />
+                                <path d="M3 9h18" />
+                                <path d="M3 15h18" />
+                            </svg>
+                        </div>
+                        <h3>Resilient Communications</h3>
+                        <p>Mesh networking techniques that maintain connectivity in challenging environments with limited infrastructure, ensuring reliable data transmission.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Mesh Networks</span>
+                            <span class="tech-tag">Edge Computing</span>
+                            <span class="tech-tag">Fault Tolerance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Pillars Section -->
+        <section class="research-pillars-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Research Pillars</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="pillars-grid">
+                    <div class="pillar">
+                        <div class="pillar-number">01</div>
+                        <div class="pillar-content">
+                            <h3>Autonomous Navigation in Unstructured Environments</h3>
+                            <p>Developing algorithms for robots to traverse complex, unpredictable terrains without prior mapping or human guidance. Our research addresses challenges such as obstacle avoidance, path planning, and real-time environment perception in disaster zones.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar">
+                        <div class="pillar-number">02</div>
+                        <div class="pillar-content">
+                            <h3>Medical AI for Remote Triage</h3>
+                            <p>Creating AI systems capable of accurately assessing injury severity and performing triage decisions comparable to trained medical professionals. This research combines computer vision, machine learning, and medical expertise to analyze visual and sensor data for injury detection.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar">
+                        <div class="pillar-number">03</div>
+                        <div class="pillar-content">
+                            <h3>Multi-Robot Coordination Strategies</h3>
+                            <p>Investigating optimal strategies for teams of heterogeneous robots to collaborate in time-critical scenarios. Our research focuses on distributed decision-making, task allocation, and coordination protocols for maximizing coverage and efficiency.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar">
+                        <div class="pillar-number">04</div>
+                        <div class="pillar-content">
+                            <h3>Human-Robot Teaming for Emergency Response</h3>
+                            <p>Exploring effective methods for robots and human responders to work as an integrated team. This research addresses interface design, communication protocols, and trust-building to enable productive collaboration between AI systems and medical personnel.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section class="publications-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Recent Publications</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="publications-list">
+                    <div class="publication">
+                        <div class="publication-meta">
+                            <span class="publication-date">March 2025</span>
+                            <span class="publication-venue">IEEE Robotics and Automation Letters</span>
+                        </div>
+                        <h3 class="publication-title">Non-Contact Vital Sign Monitoring for Autonomous Triage Systems</h3>
+                        <p class="publication-authors">J. Chen, A. Rodriguez, S. Kim, M. Williams</p>
+                        <p class="publication-abstract">This paper presents a novel approach to remote vital sign detection using a combination of thermal imaging and mmWave radar technology, enabling accurate heart rate and respiration monitoring from distances up to 3 meters.</p>
+                        <div class="publication-tags">
+                            <span class="publication-tag">Remote Sensing</span>
+                            <span class="publication-tag">Vital Signs</span>
+                            <span class="publication-tag">Medical Robotics</span>
+                        </div>
+                    </div>
+                    
+                    <div class="publication">
+                        <div class="publication-meta">
+                            <span class="publication-date">January 2025</span>
+                            <span class="publication-venue">Conference on Artificial Intelligence in Medicine (AIME)</span>
+                        </div>
+                        <h3 class="publication-title">Deep Learning for Trauma Assessment from Visual Data in Emergency Scenarios</h3>
+                        <p class="publication-authors">L. Thompson, N. Patel, R. Garcia, T. Wilson</p>
+                        <p class="publication-abstract">We introduce a multi-modal neural network architecture that combines RGB, depth, and thermal imagery to detect and classify common traumatic injuries with accuracy comparable to emergency medical technicians.</p>
+                        <div class="publication-tags">
+                            <span class="publication-tag">Computer Vision</span>
+                            <span class="publication-tag">Trauma Detection</span>
+                            <span class="publication-tag">Medical AI</span>
+                        </div>
+                    </div>
+                    
+                    <div class="publication">
+                        <div class="publication-meta">
+                            <span class="publication-date">November 2024</span>
+                            <span class="publication-venue">Robotics: Science and Systems (RSS)</span>
+                        </div>
+                        <h3 class="publication-title">Distributed Task Allocation for Heterogeneous Robot Teams in Time-Critical Triage Operations</h3>
+                        <p class="publication-authors">H. Nguyen, K. Singh, M. Johnson, A. Lee</p>
+                        <p class="publication-abstract">This paper presents an algorithm for optimal task allocation among heterogeneous robot teams, accounting for different robot capabilities, remaining battery life, and casualty priority in time-critical scenarios.</p>
+                        <div class="publication-tags">
+                            <span class="publication-tag">Multi-agent Systems</span>
+                            <span class="publication-tag">Task Allocation</span>
+                            <span class="publication-tag">Triage Optimization</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="publications-more">
+                    <a href="#" class="btn-more">View All Publications</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Projects Section -->
+        <section class="projects-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Current Projects</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="/api/placeholder/600/400" alt="ADAPT Project">
+                            <div class="project-badge">DARPA Funded</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>ADAPT: Autonomous Disaster Assessment and Patient Triage</h3>
+                            <p>Developing a comprehensive system for rapid deployment of robot teams in disaster scenarios, focusing on building damage assessment and casualty detection.</p>
+                            <div class="project-meta">
+                                <span>Timeline: 2023-2026</span>
+                                <span>Principal Investigator: Dr. Sarah Chen</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="/api/placeholder/600/400" alt="MEDIC Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>MEDIC: Medical Evaluation via Distributed Intelligent Coordination</h3>
+                            <p>Creating AI algorithms that can distribute and coordinate medical assessment tasks among multiple robots to maximize coverage efficiency and assessment accuracy.</p>
+                            <div class="project-meta">
+                                <span>Timeline: 2024-2025</span>
+                                <span>Principal Investigator: Dr. Rajiv Patel</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="/api/placeholder/600/400" alt="VITAL Project">
+                            <div class="project-badge">Industry Partnership</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>VITAL: Vital Information Technology for Algorithmic Lifesaving</h3>
+                            <p>Advancing non-contact vital sign detection technologies that can be deployed on various robot platforms for rapid health assessment in emergency scenarios.</p>
+                            <div class="project-meta">
+                                <span>Timeline: 2024-2027</span>
+                                <span>Principal Investigator: Dr. Michael Torres</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Innovation Process Section -->
+        <section class="process-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Our Innovation Process</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="process-flow">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Problem Identification</h3>
+                            <p>Collaborating with medical professionals and first responders to identify critical challenges in emergency response scenarios.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-arrow"></div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Research & Development</h3>
+                            <p>Exploring cutting-edge technologies and methodologies to address identified challenges through interdisciplinary research.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-arrow"></div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Prototype Testing</h3>
+                            <p>Building and testing prototypes in simulated emergency environments to validate technology effectiveness.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-arrow"></div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Field Deployment</h3>
+                            <p>Deploying refined systems in controlled real-world scenarios to gather performance data and user feedback.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-arrow"></div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Continuous Improvement</h3>
+                            <p>Iterating on designs and algorithms based on field data and stakeholder input to enhance system capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer with contact links -->
+        <footer class="contact-footer">
+            <div class="footer-content">
+                <div class="contact-links">
+                    <h3>Contact Us</h3>
+                    <a href="mailto:info@chiron-project.org">Email</a>
+                    <a href="#social-media">Social Media</a>
+                    <a href="#press">Press Inquiries</a>
+                    <a href="#careers">Careers</a>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 CHIRON Project. All rights reserved.</p>
+                    <p>A CMU DARPA Triage Challenge Initiative</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../../script.js"></script>
+    <script src="tech_and_research.js"></script>
+</body>
+</html>
