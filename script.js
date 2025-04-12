@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const medicCircle = document.querySelector('.medic-circle');
 
     let progress = 0;
-    const totalDuration = 1500; // Total loading time in milliseconds (reduced from 3000)
+    const totalDuration = 1000; // Total loading time in milliseconds (reduced from 3000)
     const interval = 20; // Update interval in milliseconds (reduced from 30)
 
     // Pulse animation for medic cross
