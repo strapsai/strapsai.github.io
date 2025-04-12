@@ -16,24 +16,6 @@
     <link rel="stylesheet" href="tech_and_research.css">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-        <div class="loading-container">
-            <div class="medic-icon">
-                <div class="medic-circle"></div>
-                <div class="medic-cross-vertical"></div>
-                <div class="medic-cross-horizontal"></div>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar" id="progress-bar"></div>
-            </div>
-            <div class="loading-text">
-                <p>Loading research data...</p>
-                <p id="loading-percentage">0%</p>
-            </div>
-        </div>
-    </div>
-
     <!-- News bar -->
     <div id="news-ticker">
         <div class="news-ticker-container">
@@ -46,25 +28,25 @@
         </div>
     </div>
 
-    <!-- Main Content - Hidden Initially -->
-    <div id="main-content" class="hidden">
+    <!-- Main Content -->
+    <div id="main-content">
         <nav class="button-nav">
             <div class="nav-logo">
                 <img src="../../assets/logo/chiron/png/CMU_TeamChiron_RedWht.png" alt="Chiron">
             </div>
             <a href="../../index.html#about" class="nav-button">About Us</a>
             <a href="tech_and_research.html" class="nav-button active">Tech & Research</a>
-            <a href="../../index.html#team" class="nav-button">Team</a>
+            <a href="../team/team.html" class="nav-button">Team</a>
             <a href="../robots/robots.html" class="nav-button">Robots</a>
             <a href="../../index.html#news" class="nav-button">News</a>
-            <a href="../../index.html#sponsors" class="nav-button">Sponsors</a>
+            <a href="../sponsors/sponsor.html" class="nav-button">Sponsor</a>
         </nav>
 
         <!-- Tech & Research Header Section -->
         <section class="tech-header" id="tech">
             <div class="header-content">
                 <h1>Technology & Research</h1>
-                <p>Advanced AI and robotics research pushing the boundaries of autonomous triage and casualty assessment in high-risk environments.</p>
+                <p>AI and robotics research pushing the boundaries of autonomous triage and casualty assessment in high-risk environments.</p>
             </div>
         </section>
 
@@ -155,52 +137,8 @@
             </div>
         </section>
 
-        <!-- Research Pillars Section -->
-        <section class="research-pillars-section">
-            <div class="section-container">
-                <div class="section-header">
-                    <h2>Research Pillars</h2>
-                    <div class="divider"></div>
-                </div>
-                
-                <div class="pillars-grid">
-                    <div class="pillar">
-                        <div class="pillar-number">01</div>
-                        <div class="pillar-content">
-                            <h3>Autonomous Navigation in Unstructured Environments</h3>
-                            <p>Developing algorithms for robots to traverse complex, unpredictable terrains without prior mapping or human guidance. Our research addresses challenges such as obstacle avoidance, path planning, and real-time environment perception in disaster zones.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="pillar">
-                        <div class="pillar-number">02</div>
-                        <div class="pillar-content">
-                            <h3>Medical AI for Remote Triage</h3>
-                            <p>Creating AI systems capable of accurately assessing injury severity and performing triage decisions comparable to trained medical professionals. This research combines computer vision, machine learning, and medical expertise to analyze visual and sensor data for injury detection.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="pillar">
-                        <div class="pillar-number">03</div>
-                        <div class="pillar-content">
-                            <h3>Multi-Robot Coordination Strategies</h3>
-                            <p>Investigating optimal strategies for teams of heterogeneous robots to collaborate in time-critical scenarios. Our research focuses on distributed decision-making, task allocation, and coordination protocols for maximizing coverage and efficiency.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="pillar">
-                        <div class="pillar-number">04</div>
-                        <div class="pillar-content">
-                            <h3>Human-Robot Teaming for Emergency Response</h3>
-                            <p>Exploring effective methods for robots and human responders to work as an integrated team. This research addresses interface design, communication protocols, and trust-building to enable productive collaboration between AI systems and medical personnel.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Publications Section -->
-        <section class="publications-section">
+        <!-- <section class="publications-section">
             <div class="section-container">
                 <div class="section-header">
                     <h2>Recent Publications</h2>
@@ -208,6 +146,7 @@
                 </div>
                 
                 <div class="publications-list">
+
                     <div class="publication">
                         <div class="publication-meta">
                             <span class="publication-date">March 2025</span>
@@ -221,106 +160,22 @@
                             <span class="publication-tag">Vital Signs</span>
                             <span class="publication-tag">Medical Robotics</span>
                         </div>
-                    </div>
-                    
-                    <div class="publication">
-                        <div class="publication-meta">
-                            <span class="publication-date">January 2025</span>
-                            <span class="publication-venue">Conference on Artificial Intelligence in Medicine (AIME)</span>
-                        </div>
-                        <h3 class="publication-title">Deep Learning for Trauma Assessment from Visual Data in Emergency Scenarios</h3>
-                        <p class="publication-authors">L. Thompson, N. Patel, R. Garcia, T. Wilson</p>
-                        <p class="publication-abstract">We introduce a multi-modal neural network architecture that combines RGB, depth, and thermal imagery to detect and classify common traumatic injuries with accuracy comparable to emergency medical technicians.</p>
-                        <div class="publication-tags">
-                            <span class="publication-tag">Computer Vision</span>
-                            <span class="publication-tag">Trauma Detection</span>
-                            <span class="publication-tag">Medical AI</span>
-                        </div>
-                    </div>
-                    
-                    <div class="publication">
-                        <div class="publication-meta">
-                            <span class="publication-date">November 2024</span>
-                            <span class="publication-venue">Robotics: Science and Systems (RSS)</span>
-                        </div>
-                        <h3 class="publication-title">Distributed Task Allocation for Heterogeneous Robot Teams in Time-Critical Triage Operations</h3>
-                        <p class="publication-authors">H. Nguyen, K. Singh, M. Johnson, A. Lee</p>
-                        <p class="publication-abstract">This paper presents an algorithm for optimal task allocation among heterogeneous robot teams, accounting for different robot capabilities, remaining battery life, and casualty priority in time-critical scenarios.</p>
-                        <div class="publication-tags">
-                            <span class="publication-tag">Multi-agent Systems</span>
-                            <span class="publication-tag">Task Allocation</span>
-                            <span class="publication-tag">Triage Optimization</span>
-                        </div>
-                    </div>
+                    </div>                   
+                   
                 </div>
                 
                 <div class="publications-more">
                     <a href="#" class="btn-more">View All Publications</a>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <!-- Current Projects Section -->
-        <section class="projects-section">
-            <div class="section-container">
-                <div class="section-header">
-                    <h2>Current Projects</h2>
-                    <div class="divider"></div>
-                </div>
-                
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="/api/placeholder/600/400" alt="ADAPT Project">
-                            <div class="project-badge">DARPA Funded</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>ADAPT: Autonomous Disaster Assessment and Patient Triage</h3>
-                            <p>Developing a comprehensive system for rapid deployment of robot teams in disaster scenarios, focusing on building damage assessment and casualty detection.</p>
-                            <div class="project-meta">
-                                <span>Timeline: 2023-2026</span>
-                                <span>Principal Investigator: Dr. Sarah Chen</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="/api/placeholder/600/400" alt="MEDIC Project">
-                        </div>
-                        <div class="project-content">
-                            <h3>MEDIC: Medical Evaluation via Distributed Intelligent Coordination</h3>
-                            <p>Creating AI algorithms that can distribute and coordinate medical assessment tasks among multiple robots to maximize coverage efficiency and assessment accuracy.</p>
-                            <div class="project-meta">
-                                <span>Timeline: 2024-2025</span>
-                                <span>Principal Investigator: Dr. Rajiv Patel</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="/api/placeholder/600/400" alt="VITAL Project">
-                            <div class="project-badge">Industry Partnership</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>VITAL: Vital Information Technology for Algorithmic Lifesaving</h3>
-                            <p>Advancing non-contact vital sign detection technologies that can be deployed on various robot platforms for rapid health assessment in emergency scenarios.</p>
-                            <div class="project-meta">
-                                <span>Timeline: 2024-2027</span>
-                                <span>Principal Investigator: Dr. Michael Torres</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Innovation Process Section -->
         <section class="process-section">
             <div class="section-container">
                 <div class="section-header">
-                    <h2>Our Innovation Process</h2>
+                    <h2>Our Approach</h2>
                     <div class="divider"></div>
                 </div>
                 
@@ -381,14 +236,12 @@
             <div class="footer-content">
                 <div class="contact-links">
                     <h3>Contact Us</h3>
-                    <a href="mailto:info@chiron-project.org">Email</a>
-                    <a href="#social-media">Social Media</a>
-                    <a href="#press">Press Inquiries</a>
-                    <a href="#careers">Careers</a>
+                    <a href="mailto:darpa-triage@cmu.edu">Email</a>
                 </div>
                 <div class="footer-info">
                     <p>&copy; 2025 CHIRON Project. All rights reserved.</p>
                     <p>A CMU DARPA Triage Challenge Initiative</p>
+                    <p>Website designed by <a href="https://www.linkedin.com/in/adi32/" target="_blank">Aditya Rauniyar</a></p>
                 </div>
             </div>
         </footer>

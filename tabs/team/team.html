@@ -15,23 +15,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-        <div class="loading-container">
-            <div class="medic-icon">
-                <div class="medic-circle"></div>
-                <div class="medic-cross-vertical"></div>
-                <div class="medic-cross-horizontal"></div>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar" id="progress-bar"></div>
-            </div>
-            <div class="loading-text">
-                <p>Loading team profiles...</p>
-                <p id="loading-percentage">0%</p>
-            </div>
-        </div>
-    </div>
     <!-- News bar -->
     <div id="news-ticker">
         <div class="news-ticker-container">
@@ -44,7 +27,7 @@
         </div>
     </div>
     <!-- Main Content - Hidden Initially -->
-    <div id="main-content" class="hidden">
+    <div id="main-content">
         <nav class="button-nav">
             <div class="nav-logo">
                 <img src="../../assets/logo/chiron/png/CMU_TeamChiron_RedWht.png" alt="Chiron">
@@ -54,13 +37,13 @@
             <a href="team.html" class="nav-button active">Team</a>
             <a href="../robots/robots.html" class="nav-button">Robots</a>
             <a href="../../index.html#news" class="nav-button">News</a>
-            <a href="../../index.html#sponsors" class="nav-button">Sponsors</a>
+            <a href="../sponsors/sponsor.html" class="nav-button">Sponsor</a>
         </nav>
         <!-- Team Header Section -->
         <section class="team-header" id="team">
             <div class="header-content">
                 <h1>The Team</h1>
-                <p>Team Chiron consists of professors, physicians, researchers, and students with a wide range of experience in robotics and medicine</p>
+                <p>Team Chiron consists of professors, physicians, researchers, scientists, engineers and students with a wide range of experience in robotics and medicine</p>
             </div>
         </section>
         
@@ -561,73 +544,9 @@
             </div>
         </section>
 
-        <!-- Team Areas Section -->
-        <section class="team-areas-section">
-            <div class="section-container">
-                <div class="section-header">
-                    <h2>Our Expertise</h2>
-                    <div class="divider"></div>
-                </div>
-
-                <div class="expertise-grid">
-                    <div class="expertise-area">
-                        <div class="expertise-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="12" cy="12" r="10" />
-                                <path d="M12 16a4 4 0 100-8 4 4 0 000 8z" />
-                                <path d="M12 2v4" />
-                                <path d="M12 18v4" />
-                                <path d="M4.93 4.93l2.83 2.83" />
-                                <path d="M16.24 16.24l2.83 2.83" />
-                                <path d="M2 12h4" />
-                                <path d="M18 12h4" />
-                                <path d="M4.93 19.07l2.83-2.83" />
-                                <path d="M16.24 7.76l2.83-2.83" />
-                            </svg>
-                        </div>
-                        <h3>Autonomous Robotics</h3>
-                        <p>Our robotics experts develop advanced navigation and perception systems for complex, unstructured environments.</p>
-                    </div>
-
-                    <div class="expertise-area">
-                        <div class="expertise-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 2l10 6v8l-10 6-10-6V8l10-6z" />
-                                <path d="M12 22V12" />
-                                <path d="M22 8l-10 4-10-4" />
-                            </svg>
-                        </div>
-                        <h3>Artificial Intelligence</h3>
-                        <p>Our AI researchers develop machine learning models for casualty detection, medical assessment, and triage decision support.</p>
-                    </div>
-
-                    <div class="expertise-area">
-                        <div class="expertise-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                            </svg>
-                        </div>
-                        <h3>Emergency Medicine</h3>
-                        <p>Our medical professionals provide clinical expertise and validate our systems against established triage protocols and standards.</p>
-                    </div>
-
-                    <div class="expertise-area">
-                        <div class="expertise-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20" />
-                                <path d="M2 12h20" />
-                                <path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10" />
-                            </svg>
-                        </div>
-                        <h3>Systems Integration</h3>
-                        <p>Our systems engineers combine diverse technologies into cohesive, reliable platforms that function effectively in challenging conditions.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
+                
         <!-- Join Us Section -->
-        <section class="join-section">
+        <!-- <section class="join-section">
             <div class="section-container">
                 <div class="section-header">
                     <h2>Join Our Team</h2>
@@ -658,21 +577,19 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         
         <!-- Footer with contact links -->
         <footer class="contact-footer">
             <div class="footer-content">
                 <div class="contact-links">
                     <h3>Contact Us</h3>
-                    <a href="mailto:info@chiron-project.org">Email</a>
-                    <a href="#social-media">Social Media</a>
-                    <a href="#press">Press Inquiries</a>
-                    <a href="#careers">Careers</a>
+                    <a href="mailto:darpa-triage@cmu.edu">Email</a>
                 </div>
                 <div class="footer-info">
                     <p>&copy; 2025 CHIRON Project. All rights reserved.</p>
                     <p>A CMU DARPA Triage Challenge Initiative</p>
+                    <p>Website designed by <a href="https://www.linkedin.com/in/adi32/" target="_blank">Aditya Rauniyar</a></p>
                 </div>
             </div>
         </footer>
