@@ -549,3 +549,65 @@
         font-size: 1rem;
     }
 }
+
+.year1-gif-section {
+    background-color: var(--dark-bg);
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 40px;
+}
+
+.gif-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.gif-header {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.gif-header h2 {
+    color: var(--light-text);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.gif-header p {
+    color: var(--light-camel);
+    font-size: 1.1rem;
+}
+
+.fullscreen-gif {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.fullscreen-gif img {
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    object-fit: contain;
+    border-top: 3px solid var(--medic-red);
+    border-bottom: 3px solid var(--medic-red);
+}
+
+@media (max-width: 768px) {
+    .gif-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .gif-header p {
+        font-size: 1rem;
+    }
+}
