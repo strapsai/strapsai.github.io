@@ -843,3 +843,127 @@ section {
         max-width: 80%;
     }
 }
+
+/* Testimonials */
+/* Testimonials Section Styling */
+.testimonials-section {
+    background-color: rgba(71, 68, 47, 0.85);
+    padding: 60px 0;
+    position: relative;
+}
+
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../assets/backgrounds/plane_crash_2K.jpg') center/cover no-repeat;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.testimonials-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonials-intro {
+    text-align: center;
+    color: var(--light-text);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 0 20px;
+}
+
+.testimonial-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-left: 4px solid var(--medic-red);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 25px;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-image {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--army-camel);
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-text {
+    flex: 1;
+    color: var(--light-text);
+}
+
+.testimonial-text p {
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.testimonial-text p::before {
+    content: '"';
+    font-size: 60px;
+    color: var(--medic-red);
+    opacity: 0.3;
+    position: absolute;
+    top: -20px;
+    left: -15px;
+    z-index: -1;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.testimonial-author strong {
+    color: var(--medic-red);
+    margin-bottom: 5px;
+}
+
+.testimonial-author span {
+    font-size: 0.85rem;
+    color: var(--light-camel);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-card {
+        max-width: 100%;
+    }
+}
