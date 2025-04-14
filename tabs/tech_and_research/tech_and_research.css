@@ -1,0 +1,619 @@
+/* Tech & Research Page Specific Styles */
+/* Targeting the correct directory structure for tabs/tech_and_research/tech_and_research.html */
+
+/* Header Section */
+.tech-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1920/600') center/cover no-repeat;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px; /* Account for fixed nav */
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, transparent 20%, rgba(71, 68, 47, 0.4) 70%);
+    z-index: 1;
+}
+
+.header-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.header-content h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.header-content p {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid var(--medic-red);
+}
+
+/* Section Containers */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    color: var(--light-text);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.divider {
+    height: 3px;
+    width: 80px;
+    background-color: var(--medic-red);
+    margin: 0 auto;
+}
+
+/* Core Technologies Section */
+.core-tech-section {
+    padding: 80px 0;
+    background-color: var(--dark-bg);
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.tech-card {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-top: 3px solid var(--medic-red);
+    height: 100%;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.tech-icon {
+    margin-bottom: 20px;
+    color: var(--medic-red);
+}
+
+.tech-card h3 {
+    color: var(--light-text);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.tech-card p {
+    color: var(--light-camel);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.tech-tag {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-text);
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+/* Research Pillars Section */
+.research-pillars-section {
+    padding: 80px 0;
+    background-color: rgba(60, 58, 40, 0.8);
+}
+
+.pillars-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.pillar {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.pillar:hover {
+    transform: translateX(10px);
+}
+
+.pillar-number {
+    background-color: var(--medic-red);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    min-width: 80px;
+}
+
+.pillar-content {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+.pillar-content h3 {
+    color: var(--light-text);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.pillar-content p {
+    color: var(--light-camel);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Publications Section */
+.publications-section {
+    padding: 80px 0;
+    background-color: var(--dark-bg);
+}
+
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.publication {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+    border-left: 4px solid var(--medic-red);
+}
+
+.publication:hover {
+    transform: translateY(-5px);
+}
+
+.publication-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--light-camel);
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.publication-title {
+    color: var(--light-text);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.publication-authors {
+    color: var(--medic-red);
+    font-style: italic;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.publication-abstract {
+    color: var(--light-text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.publication-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.publication-tag {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-camel);
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 30px;
+}
+
+.publications-more {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-more {
+    display: inline-block;
+    background-color: var(--army-camel);
+    color: var(--dark-bg);
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-more:hover {
+    background-color: var(--medic-red);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Current Projects Section */
+.projects-section {
+    padding: 80px 0;
+    background-color: rgba(60, 58, 40, 0.8);
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project-card {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    flex: 0 0 40%;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-badge {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    background-color: var(--medic-red);
+    color: white;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.project-content {
+    flex: 0 0 60%;
+    padding: 30px;
+}
+
+.project-content h3 {
+    color: var(--light-text);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.project-content p {
+    color: var(--light-camel);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.85rem;
+    color: var(--light-text);
+    opacity: 0.8;
+}
+
+/* Innovation Process Section */
+.process-section {
+    padding: 80px 0;
+    background-color: var(--dark-bg);
+}
+
+.process-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateX(10px);
+}
+
+.step-number {
+    background-color: var(--medic-red);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex-grow: 1;
+}
+
+.step-content h3 {
+    color: var(--light-text);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    color: var(--light-camel);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.process-arrow {
+    width: 2px;
+    height: 30px;
+    background-color: var(--army-camel);
+    margin-left: 20px;
+}
+
+/* Animation Classes */
+.tech-card, .pillar, .publication, .project-card, .process-step {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-visible .tech-card, 
+.section-visible .pillar, 
+.section-visible .publication, 
+.section-visible .project-card, 
+.section-visible .process-step {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered Animation */
+.section-visible .tech-card:nth-child(1),
+.section-visible .pillar:nth-child(1),
+.section-visible .publication:nth-child(1),
+.section-visible .project-card:nth-child(1),
+.section-visible .process-step:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.section-visible .tech-card:nth-child(2),
+.section-visible .pillar:nth-child(2),
+.section-visible .publication:nth-child(2),
+.section-visible .project-card:nth-child(2),
+.section-visible .process-step:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.section-visible .tech-card:nth-child(3),
+.section-visible .pillar:nth-child(3),
+.section-visible .publication:nth-child(3),
+.section-visible .project-card:nth-child(3),
+.section-visible .process-step:nth-child(5) {
+    transition-delay: 0.3s;
+}
+
+.section-visible .tech-card:nth-child(4),
+.section-visible .pillar:nth-child(4),
+.section-visible .process-step:nth-child(7) {
+    transition-delay: 0.4s;
+}
+
+.section-visible .process-step:nth-child(9) {
+    transition-delay: 0.5s;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .tech-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .project-card {
+        flex-direction: column;
+    }
+    
+    .project-image {
+        flex: 0 0 auto;
+        height: 250px;
+    }
+    
+    .project-content {
+        flex: 0 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pillar-number {
+        font-size: 1.5rem;
+        min-width: 60px;
+        padding: 10px 15px;
+    }
+    
+    .publication-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .project-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    
+    .header-content p {
+        font-size: 1rem;
+    }
+    
+    .tech-card, .pillar-content, .publication, .project-content, .process-step {
+        padding: 20px;
+    }
+    
+    .publication-title, .project-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+.year1-gif-section {
+    background-color: var(--dark-bg);
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 40px;
+}
+
+/* Year 2 GIF Section */
+.year2-gif-section {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+}
+
+.gif-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.gif-header {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.gif-header h2 {
+    color: var(--light-text);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.gif-header p {
+    color: var(--light-camel);
+    font-size: 1.1rem;
+}
+
+.fullscreen-gif {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.fullscreen-gif img {
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    object-fit: contain;
+    border-top: 3px solid var(--medic-red);
+    border-bottom: 3px solid var(--medic-red);
+}
+
+@media (max-width: 768px) {
+    .gif-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .gif-header p {
+        font-size: 1rem;
+    }
+}
