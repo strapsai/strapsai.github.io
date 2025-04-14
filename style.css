@@ -1211,3 +1211,22 @@ section {
         font-size: 1rem;
     }
 }
+
+.photo-credit {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.photo-credit a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+
+.photo-credit a:hover {
+    text-decoration: underline;
+}
