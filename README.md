@@ -168,4 +168,4 @@ npx http-server
 
 ## License
 
-All rights reserved. This project is proprietary and confidential.
+All rights reserved. 
