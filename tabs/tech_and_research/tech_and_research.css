@@ -559,6 +559,12 @@
     margin-top: 40px;
 }
 
+/* Year 2 GIF Section */
+.year2-gif-section {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+}
+
 .gif-container {
     display: flex;
     flex-direction: column;
