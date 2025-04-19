@@ -1,4 +1,33 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu functionality
+    const burgerMenu = document.querySelector('.burger-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeMenu = document.querySelector('.close-menu');
+    
+    if (burgerMenu) {
+        burgerMenu.addEventListener('click', function() {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+    }
+    
+    if (closeMenu) {
+        closeMenu.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (mobileMenu && mobileMenu.classList.contains('active') && 
+            !mobileMenu.contains(e.target) && 
+            !burgerMenu.contains(e.target)) {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    });
+    
     // Initialize navigation behavior
     initNavigation();
     
