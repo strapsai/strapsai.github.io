@@ -91,53 +91,116 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize button navigation
     function initButtonNav() {
         const navButtons = document.querySelectorAll('.nav-button');
+        const mobileNavButtons = document.querySelectorAll('.mobile-nav-button');
         const buttonNav = document.querySelector('.button-nav');
         const scene = document.getElementById('scene');
+        const burgerMenu = document.querySelector('.burger-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const closeMenu = document.querySelector('.close-menu');
 
         // Set "About Us" as initially active
         if (navButtons.length > 0 && window.location.pathname.indexOf('robots.html') === -1) {
             navButtons[0].classList.add('active');
+            if (mobileNavButtons.length > 0) {
+                mobileNavButtons[0].classList.add('active');
+            }
         }
 
-        // Handle button clicks
+        // Toggle mobile menu
+        if (burgerMenu) {
+            burgerMenu.addEventListener('click', function() {
+                mobileMenu.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+            });
+        }
+
+        // Close mobile menu
+        if (closeMenu) {
+            closeMenu.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+        }
+
+        // Handle button clicks for desktop navigation
         navButtons.forEach(button => {
             button.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                
-                // Only prevent default for same-page links (starting with #)
-                if (href && href.startsWith('#')) {
-                    e.preventDefault();
-
-                    // Remove active class from all buttons
-                    navButtons.forEach(btn => btn.classList.remove('active'));
-
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    // Scroll to the anchor if it exists on this page
-                    const targetId = href.substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
-                // For external links, allow default navigation behavior
-                // No preventDefault() means the browser will navigate to the href
+                handleNavButtonClick(e, this, navButtons);
             });
         });
 
-        // Handle scroll to change navigation background
+        // Handle button clicks for mobile navigation
+        mobileNavButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                handleNavButtonClick(e, this, mobileNavButtons);
+                // Close mobile menu after clicking a link
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+        });
+
+        // Function to handle navigation button clicks
+        function handleNavButtonClick(e, button, allButtons) {
+            const href = button.getAttribute('href');
+            
+            // Only prevent default for same-page links (starting with #)
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+
+                // Remove active class from all buttons
+                allButtons.forEach(btn => btn.classList.remove('active'));
+
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Scroll to the anchor if it exists on this page
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+            // For external links, allow default navigation behavior
+        }
+
+        // Handle scroll to change navigation background and show logo
         window.addEventListener('scroll', function() {
             // Get the position of the scene
+            const navLogo = document.getElementById('nav-logo');
+            
             if (scene) {
                 const sceneRect = scene.getBoundingClientRect();
 
                 // If scene is scrolled out of view (top of scene is above the window)
                 if (sceneRect.bottom <= 0) {
                     buttonNav.classList.add('scrolled');
+                    if (navLogo) {
+                        navLogo.style.opacity = '1';
+                    }
                 } else {
                     buttonNav.classList.remove('scrolled');
+                    if (navLogo) {
+                        navLogo.style.opacity = '0';
+                    }
                 }
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (mobileMenu.classList.contains('active') && 
+                !mobileMenu.contains(e.target) && 
+                !burgerMenu.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
             }
         });
     }
@@ -174,26 +237,41 @@ document.addEventListener('DOMContentLoaded', function() {
         // Only proceed if scene element exists
         if (!scene) return;
 
-        // Casualties data
+        // Check if we're on a mobile device
+        const isMobile = window.innerWidth <= 768;
+        const isSmallMobile = window.innerWidth <= 480;
+
+        // Adjust positions for mobile devices
+        let mobileAdjustX = 0;
+        let mobileAdjustY = 0;
+        
+        if (isMobile) {
+            mobileAdjustX = 10; // Move elements more to the left on mobile
+            if (isSmallMobile) {
+                mobileAdjustX = 15; // Even more to the left on very small screens
+            }
+        }
+
+        // Casualties data - adjust positions for mobile
         const casualties = [
-            { x: 35, y: 60, severity: 'high' },
-            { x: 70, y: 40, severity: 'medium' },
-            { x: 25, y: 80, severity: 'low' },
-            { x: 60, y: 70, severity: 'high' },
-            { x: 80, y: 60, severity: 'medium' }
+            { x: 35 - mobileAdjustX, y: 60, severity: 'high' },
+            { x: 70 - mobileAdjustX, y: 40, severity: 'medium' },
+            { x: 25 - mobileAdjustX, y: 80, severity: 'low' },
+            { x: 60 - mobileAdjustX, y: 70, severity: 'high' },
+            { x: 80 - mobileAdjustX, y: 60, severity: 'medium' }
         ];
 
-        // Robots initial positions
+        // Robots initial positions - adjust for mobile
         const drones = [
-            { x: 50, y: 20, id: 'drone1' },
-            { x: 80, y: 20, id: 'drone2' },
-            { x: 20, y: 80, id: 'drone3' },
-            { x: 80, y: 80, id: 'drone4' }
+            { x: 50 - mobileAdjustX, y: 20, id: 'drone1' },
+            { x: 80 - mobileAdjustX, y: 20, id: 'drone2' },
+            { x: 20 - mobileAdjustX, y: 80, id: 'drone3' },
+            { x: 80 - mobileAdjustX, y: 80, id: 'drone4' }
         ];
 
         const quadrupeds = [
-            { x: 50, y: 30, id: 'quad1' },
-            { x: 50, y: 70, id: 'quad2' }
+            { x: 50 - mobileAdjustX, y: 30, id: 'quad1' },
+            { x: 50 - mobileAdjustX, y: 70, id: 'quad2' }
         ];
 
         // Create casualties
@@ -236,8 +314,12 @@ document.addEventListener('DOMContentLoaded', function() {
             coverageArea.id = `${quad.id}-coverage`;
             coverageArea.style.left = `${quad.x}%`;
             coverageArea.style.top = `${quad.y}%`;
-            coverageArea.style.width = '80px'; // Smaller coverage than drones
-            coverageArea.style.height = '80px';
+            
+            // Adjust coverage size for mobile
+            const coverageSize = isMobile ? (isSmallMobile ? '60px' : '70px') : '80px';
+            coverageArea.style.width = coverageSize;
+            coverageArea.style.height = coverageSize;
+            
             scene.appendChild(coverageArea);
             
             // Create the quadruped element
@@ -275,8 +357,12 @@ document.addEventListener('DOMContentLoaded', function() {
             coverageArea.id = `${drone.id}-coverage`;
             coverageArea.style.left = `${drone.x}%`;
             coverageArea.style.top = `${drone.y}%`;
-            coverageArea.style.width = '100px'; // Coverage diameter - adjust as needed
-            coverageArea.style.height = '100px'; // Same as width for a perfect circle
+            
+            // Adjust coverage size for mobile
+            const coverageSize = isMobile ? (isSmallMobile ? '70px' : '85px') : '100px';
+            coverageArea.style.width = coverageSize;
+            coverageArea.style.height = coverageSize;
+            
             scene.appendChild(coverageArea);
 
             const droneEl = document.createElement('div');
@@ -358,7 +444,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Create circular motion with different phases
                 const time = Date.now() / 1000;
                 const angle = time * 30 + (index * 90);
-                const radius = 10;
+                
+                // Adjust animation radius for mobile
+                const radius = isMobile ? (isSmallMobile ? 6 : 8) : 10;
+                
                 const newX = drone.x + Math.sin(angle * Math.PI / 180) * radius;
                 const newY = drone.y + Math.cos(angle * Math.PI / 180) * radius;
 

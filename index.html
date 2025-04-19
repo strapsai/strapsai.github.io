@@ -64,16 +64,41 @@
     <!-- Main Content - Hidden Initially -->
     <div id="main-content" class="hidden">
         <nav class="button-nav">
-            <div class="nav-logo">
+            <div class="nav-logo" id="nav-logo" style="opacity: 0; transition: opacity 0.5s ease;">
                 <img src="assets/logo/chiron/png/CMU_TeamChiron_RedWht.png" alt="Chiron">
             </div>
-            <a href="#about" class="nav-button">About Us</a>
-            <a href="tabs/tech_and_research/tech_and_research.html" class="nav-button">Tech & Research</a>
-            <a href="tabs/team/team.html" class="nav-button">Team</a>
-            <a href="tabs/robots/robots.html#robots" class="nav-button">Robots</a>
-            <a href="#news" class="nav-button">News</a>
-            <a href="tabs/sponsors/sponsor.html" class="nav-button">Sponsor</a>
+            <div class="nav-links">
+                <a href="#about" class="nav-button">About Us</a>
+                <a href="tabs/tech_and_research/tech_and_research.html" class="nav-button">Tech & Research</a>
+                <a href="tabs/team/team.html" class="nav-button">Team</a>
+                <a href="tabs/robots/robots.html#robots" class="nav-button">Robots</a>
+                <a href="#news" class="nav-button">News</a>
+                <a href="tabs/sponsors/sponsor.html" class="nav-button">Sponsor</a>
+            </div>
+            <div class="burger-menu">
+                <div class="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </nav>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <img src="assets/logo/chiron/png/CMU_TeamChiron_RedWht.png" alt="Chiron" class="mobile-logo">
+                <div class="close-menu">×</div>
+            </div>
+            <div class="mobile-menu-links">
+                <a href="#about" class="mobile-nav-button">About Us</a>
+                <a href="tabs/tech_and_research/tech_and_research.html" class="mobile-nav-button">Tech & Research</a>
+                <a href="tabs/team/team.html" class="mobile-nav-button">Team</a>
+                <a href="tabs/robots/robots.html#robots" class="mobile-nav-button">Robots</a>
+                <a href="#news" class="mobile-nav-button">News</a>
+                <a href="tabs/sponsors/sponsor.html" class="mobile-nav-button">Sponsor</a>
+            </div>
+        </div>
 
         <!-- Tactical Scene - Animation Area -->
         <section class="tactical-scene" id="scene">

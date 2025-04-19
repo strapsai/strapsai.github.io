@@ -32,13 +32,38 @@
             <div class="nav-logo">
                 <img src="../../assets/logo/chiron/png/CMU_TeamChiron_RedWht.png" alt="Chiron">
             </div>
-            <a href="../../index.html" class="nav-button">About Us</a>
-            <a href="../tech_and_research/tech_and_research.html" class="nav-button">Tech & Research</a>
-            <a href="team.html" class="nav-button active">Team</a>
-            <a href="../robots/robots.html" class="nav-button">Robots</a>
-            <a href="../../index.html#news" class="nav-button">News</a>
-            <a href="../sponsors/sponsor.html" class="nav-button">Sponsor</a>
+            <div class="nav-links">
+                <a href="../../index.html" class="nav-button">About Us</a>
+                <a href="../tech_and_research/tech_and_research.html" class="nav-button">Tech & Research</a>
+                <a href="team.html" class="nav-button active">Team</a>
+                <a href="../robots/robots.html" class="nav-button">Robots</a>
+                <a href="../../index.html#news" class="nav-button">News</a>
+                <a href="../sponsors/sponsor.html" class="nav-button">Sponsor</a>
+            </div>
+            <div class="burger-menu">
+                <div class="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </nav>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <img src="../../assets/logo/chiron/png/CMU_TeamChiron_RedWht.png" alt="Chiron" class="mobile-logo">
+                <div class="close-menu">×</div>
+            </div>
+            <div class="mobile-menu-links">
+                <a href="../../index.html" class="mobile-nav-button">About Us</a>
+                <a href="../tech_and_research/tech_and_research.html" class="mobile-nav-button">Tech & Research</a>
+                <a href="team.html" class="mobile-nav-button active">Team</a>
+                <a href="../robots/robots.html" class="mobile-nav-button">Robots</a>
+                <a href="../../index.html#news" class="mobile-nav-button">News</a>
+                <a href="../sponsors/sponsor.html" class="mobile-nav-button">Sponsor</a>
+            </div>
+        </div>
         <!-- Team Header Section -->
         <section class="team-header" id="team">
             <div class="header-content">
@@ -680,8 +705,57 @@
             </div>
         </footer>
     </div>
-    <script src="../../script.js"></script>
     <script src="team.js"></script>
+    <script src="../../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize mobile menu functionality
+            const burgerMenu = document.querySelector('.burger-menu');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const closeMenu = document.querySelector('.close-menu');
+            
+            if (burgerMenu) {
+                burgerMenu.addEventListener('click', function() {
+                    mobileMenu.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+                });
+            }
+            
+            if (closeMenu) {
+                closeMenu.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = ''; // Restore scrolling
+                });
+            }
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (mobileMenu.classList.contains('active') && 
+                    !mobileMenu.contains(e.target) && 
+                    !burgerMenu.contains(e.target)) {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = ''; // Restore scrolling
+                }
+            });
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = ''; // Restore scrolling
+                }
+            });
+            
+            // Handle mobile menu links
+            const mobileNavButtons = document.querySelectorAll('.mobile-nav-button');
+            mobileNavButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = ''; // Restore scrolling
+                });
+            });
+        });
+    </script>
 </body>
 </html>
                                     
