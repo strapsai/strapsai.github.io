@@ -921,6 +921,15 @@ section {
     will-change: transform;
 }
 
+.carousel-slide a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
 .carousel-slide {
     flex-shrink: 0;
     padding: 0 20px;
@@ -947,13 +956,29 @@ section {
     min-width: 150px;
 }
 
-.carousel-slide:hover {
-    opacity: 1;
+/* Specific tier heights for carousel */
+.carousel-slide.tier-1 img {
+    max-height: 60px;
+}
+
+.carousel-slide.tier-2 img {
+    max-height: 50px;
+}
+
+.carousel-slide.tier-3 img {
+    max-height: 40px;
+}
+
+.carousel-slide img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
 }
 
 .carousel-slide img {
-    max-height: 100%;
     max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
     object-fit: contain;
     filter: grayscale(30%);
     transition: filter 0.3s ease, transform 0.3s ease;
