@@ -25,7 +25,7 @@
 
 .header-content {
     text-align: center;
-    max-width: 800px;
+    max-width: none;
     padding: 0 20px;
     position: relative;
     z-index: 2;
@@ -49,6 +49,12 @@
     padding: 15px;
     border-radius: 5px;
     border-left: 4px solid var(--medic-red);
+}
+
+.no-wrap {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
 }
 
 /* Section Containers */
@@ -378,6 +384,10 @@
     
     .nav-logo img {
         height: 24px;
+    }
+
+    .no-wrap {
+        white-space: normal;
     }
 }
 

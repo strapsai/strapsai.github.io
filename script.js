@@ -5,10 +5,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const progressBar = document.getElementById('progress-bar');
     const loadingPercentage = document.getElementById('loading-percentage');
     const medicCircle = document.querySelector('.medic-circle');
+    const footerCopyright = '&copy; 2026 Team Chiron. All rights reserved.';
+
+    function syncFooterCopyright() {
+        const footerLines = document.querySelectorAll('.contact-footer .footer-info p:first-child');
+        footerLines.forEach(line => {
+            line.innerHTML = footerCopyright;
+        });
+    }
 
     let progress = 0;
-    const totalDuration = 1000; // Total loading time in milliseconds (reduced from 3000)
-    const interval = 20; // Update interval in milliseconds (reduced from 30)
+    const totalDuration = 600; // Total loading time in milliseconds (reduced from 3000)
+    const interval = 10; // Update interval in milliseconds (reduced from 30)
+    const baseIncrement = (interval / totalDuration) * 100;
 
     // Pulse animation for medic cross
     function pulseAnimation() {
@@ -39,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const pulseIntervalId = pulseAnimation();
+    syncFooterCopyright();
 
     // Simulate loading progress
     const loadingInterval = setInterval(() => {
@@ -46,15 +56,15 @@ document.addEventListener('DOMContentLoaded', function() {
         let increment;
 
         if (progress < 20) {
-            increment = 1.4; // Start faster (doubled)
+            increment = baseIncrement * 0.7; // Start faster
         } else if (progress < 50) {
-            increment = 1.2; // Doubled
+            increment = baseIncrement * 0.6;
         } else if (progress < 70) {
-            increment = 0.8; // Doubled
+            increment = baseIncrement * 0.4;
         } else if (progress < 90) {
-            increment = 0.6; // Doubled
+            increment = baseIncrement * 0.3;
         } else {
-            increment = 0.4; // Doubled but still slower at the end
+            increment = baseIncrement * 0.2; // Slower at the end
         }
 
         progress += increment;

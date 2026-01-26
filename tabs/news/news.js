@@ -6,6 +6,14 @@
 // Array of news items - update this with your news items
 const newsItems = [
     {
+        type: 'article',
+        url: 'https://www.cbsnews.com/video/robot-dogs-sniff-out-places-too-dangerous-for-humans/#x',
+        title: 'Robot "dogs" sniff out places too dangerous for humans',
+        date: 'January 25, 2026',
+        excerpt: 'At Carnegie Mellon University in Pittsburgh, researchers are hard at work developing robot dogs designed to assist in situations too dangerous for humans to help. Tony Dokoupil has the story.',
+        thumbnail: 'tabs/news/assets/2026-01-16-cbs.png'
+    },
+    {
         type: 'video',
         url: 'https://youtu.be/tiPbo0PGmyg?si=MKh2VLWqIluKl11M',
         title: 'Researchers at CMU and Pitt developing robots to help first responders',
