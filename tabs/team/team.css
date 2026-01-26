@@ -84,6 +84,130 @@
     margin: 0 auto;
 }
 
+/* Recruiting Callout Section */
+.recruiting-section {
+    padding: 50px 0;
+    background: linear-gradient(135deg, rgba(71, 68, 47, 0.9), rgba(0, 0, 0, 0.85));
+}
+
+.recruiting-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    padding: 30px 40px;
+    border-left: 4px solid var(--medic-red);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.recruiting-content h2 {
+    color: var(--light-text);
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.recruiting-content p {
+    color: var(--light-camel);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.btn-recruiting {
+    display: inline-block;
+    white-space: nowrap;
+    background-color: var(--army-camel);
+    color: var(--dark-bg);
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.btn-recruiting:hover {
+    background-color: var(--medic-red);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.recruiting-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.recruiting-area {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 20px 22px;
+    border-top: 3px solid var(--medic-red);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recruiting-area:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.25);
+}
+
+.recruiting-area h3 {
+    color: var(--light-text);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.recruiting-area p {
+    color: var(--light-camel);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.recruiting-contacts {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 0;
+    color: var(--light-text);
+}
+
+.recruiting-contacts li {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    column-gap: 12px;
+    align-items: start;
+}
+
+.recruiting-contacts li + li {
+    margin-top: 6px;
+}
+
+.contact-type {
+    color: var(--light-camel);
+    font-weight: 600;
+    min-height: 1em;
+}
+
+.contact-name {
+    color: var(--light-text);
+}
+
+.recruiting-contacts a {
+    color: var(--light-camel);
+    text-decoration: none;
+}
+
+.recruiting-contacts a:hover {
+    color: var(--medic-red);
+    text-decoration: underline;
+}
+
 /* Team Section Styles - Updated to match HTML structure */
 .team-section {
     padding: 80px 0;
@@ -400,6 +524,12 @@
 
     .no-wrap {
         white-space: normal;
+    }
+
+    .recruiting-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
     }
 }
 
