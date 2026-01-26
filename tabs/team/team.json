@@ -1,0 +1,535 @@
+[
+  {
+    "name": "Kimberly Elenberg",
+    "memberType": "PI",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "PI, Functional SME",
+    "position": "DNP, Informatics",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/elenberg.jpg",
+    "imageLink": "https://www.linkedin.com/in/kimberly-elenberg-0b52a595",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/kimberly-elenberg-0b52a595" }
+    ]
+  },
+  {
+    "name": "Sebastian Scherer",
+    "memberType": "PI",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Co-PI Sensor Pack",
+    "position": "Associate Research Professor",
+    "affiliation": "AirLab, Carnegie Mellon University",
+    "image": "assets/basti.jpeg",
+    "imageLink": "https://www.theairlab.org",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/sebastian-scherer-a026961a/" },
+      { "type": "globe", "url": "https://www.theairlab.org" }
+    ]
+  },
+  {
+    "name": "John Galeotti",
+    "memberType": "PI",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Co-PI Vision",
+    "position": "Robotics",
+    "affiliation": "Biomedical Image Guidance Lab, Carnegie Mellon University",
+    "image": "assets/jgaleotti.jpg",
+    "imageLink": "https://www.ri.cmu.edu/ri-faculty/john-galeotti/",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/john-galeotti/" },
+      { "type": "globe", "url": "https://www.ri.cmu.edu/ri-faculty/john-galeotti/" }
+    ]
+  },
+  {
+    "name": "Artur Dubrawski",
+    "memberType": "PI",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Co-PI AI, Data Analysis",
+    "position": "PhD Robotics & AI",
+    "affiliation": "AutonLab, Carnegie Mellon University",
+    "image": "assets/dubrawski_artur.jpg",
+    "imageLink": "https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/artur-dubrawski/" },
+      { "type": "globe", "url": "https://www.ri.cmu.edu/ri-faculty/artur-w-dubrawski/" }
+    ]
+  },
+  {
+    "name": "Laszlo Jeni",
+    "memberType": "PI",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Co-PI Vision",
+    "position": "Robotics",
+    "affiliation": "CUBE Lab, Carnegie Mellon University",
+    "image": "assets/Laszlo-Jeni.png",
+    "imageLink": "https://www.laszlojeni.com/",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/laszlojeni/" },
+      { "type": "globe", "url": "https://www.laszlojeni.com/" }
+    ]
+  },
+  {
+    "name": "Srinivasa Narasimhan",
+    "memberType": "PI",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Co-PI Vision",
+    "position": "Computer Science and Engineering",
+    "affiliation": "ILIM Lab, Carnegie Mellon University",
+    "image": "assets/srinivasa.jpeg",
+    "imageLink": "https://www.cs.cmu.edu/~srinivas/",
+    "social": [
+      { "type": "globe", "url": "https://www.cs.cmu.edu/~srinivas/" }
+    ]
+  },
+  {
+    "name": "Lenny Weiss",
+    "memberType": "PI",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Co-PI Medical",
+    "position": "Medical Doctor",
+    "affiliation": "University of Pittsburgh",
+    "image": "assets/lenny weiss_0.jpg",
+    "imageLink": "https://www.emergencymedicine.pitt.edu/people/leonard-weiss",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/lenny-weiss-2aa180a5/" },
+      { "type": "globe", "url": "https://www.emergencymedicine.pitt.edu/people/leonard-weiss" }
+    ]
+  },
+  {
+    "name": "Tobias Mascetta",
+    "memberType": "Staff",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Robotics, Autonomy, Planning",
+    "position": "Visiting Researcher",
+    "affiliation": "Cyber-Physical Systems Group at Technical University of Munich",
+    "image": "assets/tobias_mascetta.jpg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/tobias-mascetta-ba1a29252/" }
+    ]
+  },
+  {
+    "name": "Yaoyu Hu",
+    "memberType": "Scientist",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Sensor Pack, Autonomy, Systems Lead",
+    "position": "Mechanical Doctor",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/huyaoyu.jpeg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/yaoyu-hu-68946985/" },
+      { "type": "globe", "url": "http://www.huyaoyu.com/" }
+    ]
+  },
+  {
+    "name": "Varun Kasireddy",
+    "memberType": "Scientist",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Multimodal Sensors, Vision",
+    "position": "PhD Civil Engineering",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/kasireddy.png",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/varunkasi/" },
+      { "type": "globe", "url": "https://theairlab.org/team/varunkasi/" }
+    ]
+  },
+  {
+    "name": "Kabir Kedia",
+    "memberType": "Staff",
+    "currentMember": "false",
+    "displayed": "true",
+    "role": "Autonomy, Sensor Pack",
+    "position": "Engineering",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/kabir_kedia.jpeg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/kabir-kedia/" }
+    ]
+  },
+  {
+    "name": "Viktor Walter",
+    "memberType": "Postdoc",
+    "currentMember": "false",
+    "displayed": "true",
+    "role": "Robotics, Computer vision",
+    "position": "PhD Robotics",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/viktor_walter.jpg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/viktor-walter-37287a1a5/" }
+    ]
+  },
+  {
+    "name": "Chi-En Teh",
+    "memberType": "Staff",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Physiological Algorithms",
+    "position": "PhD Nuclear Physics",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/chi-en_teh.jpeg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/fanurs-teh/" },
+      { "type": "globe", "url": "https://fanurs.com/" }
+    ]
+  },
+  {
+    "name": "Aditya Rauniyar",
+    "memberType": "Staff",
+    "currentMember": "false",
+    "displayed": "true",
+    "role": "Scene Understanding and Autonomy",
+    "position": "Research Engineer",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/adi.png",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/adi32/" }
+    ]
+  },
+  {
+    "name": "James Emilian",
+    "memberType": "PhD",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Vision & Vitals (MS Research Student)",
+    "position": "Biomedical Engineering / Robotics",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/james_emilian.jpg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/james-emilian/" },
+      { "type": "globe", "url": "https://jamesemi.github.io/blog/" }
+    ]
+  },
+  {
+    "name": "Merritt Kowaleski",
+    "memberType": "Staff",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Data Engineer, T&V",
+    "position": "BC Mathematics",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/Merritt Kowaleski.jpeg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/merritt-kowaleski-09b2a79a/" }
+    ]
+  },
+  {
+    "name": "Parv Maheshwari",
+    "memberType": "PhD",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Slam, Robot Navigation",
+    "position": "Robotics PhD, MS Mathematics and Computing",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/parv_maheshwari.jpg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/parv-maheshwari/" },
+      { "type": "globe", "url": "https://www.parvmaheshwari.com/" }
+    ]
+  },
+  {
+    "name": "Samuel Triest",
+    "memberType": "PhD",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Planning, Robot Navigation",
+    "position": "Robotics PhD",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/sam_triest.png",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/striest/" },
+      { "type": "globe", "url": "https://striest.github.io/" }
+    ]
+  },
+  {
+    "name": "Ceci Morales",
+    "memberType": "PhD",
+    "currentMember": "false",
+    "displayed": "true",
+    "role": "Vitals and Vision",
+    "position": "PhD student, MS Robotics",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/Ceci Morales.jpg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/cecilia-morales-garza/" }
+    ]
+  },
+  {
+    "name": "Bowen Li",
+    "memberType": "PhD",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Autonomy",
+    "position": "PhD Robotics",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/Bowen Li.jpg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/bowen-li-199683281/" },
+      { "type": "globe", "url": "https://jaraxxus-me.github.io/" }
+    ]
+  },
+  {
+    "name": "Mayank Mishra",
+    "memberType": "PhD",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Vision",
+    "position": "MS Robotics",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/mayankmishra.jpg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/mayank-mishra-009/" },
+      { "type": "globe", "url": "https://mmayank74567.github.io/" }
+    ]
+  },
+  {
+    "name": "Micah Nye",
+    "memberType": "PhD",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Robot Navigation, Systems",
+    "position": "MS Robotics",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/micah_nye.png",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/micahnye/" }
+    ]
+  },
+  {
+    "name": "Aniket Agarwal",
+    "memberType": "Master",
+    "currentMember": "false",
+    "displayed": "true",
+    "role": "Vision",
+    "position": "MS Robotics",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/Aniket Agarwal.jpg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/aniket-agarwal1999/" },
+      { "type": "globe", "url": "https://aniket-agarwal1999.github.io/" }
+    ]
+  },
+  {
+    "name": "Anthony Brogni",
+    "memberType": "Master",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Autonomy and Vision",
+    "position": "MS Robotics",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/anthony_brogni.jpg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/anthony-brogni/" },
+      { "type": "globe", "url": "https://theairlab.org/team/anthony_brogni/" }
+    ]
+  },
+  {
+    "name": "Szymon Rusiecki",
+    "memberType": "Staff",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Bayesian Model",
+    "position": "ME Computer Science",
+    "affiliation": "AGH University of Krakow",
+    "image": "assets/Szymon.jpg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/rusiek/" }
+    ]
+  },
+  {
+    "name": "Zhexian Zhou",
+    "memberType": "Staff",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Vision",
+    "position": "MS AIE-ECE",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/zhexianzhou.jpg",
+    "social": [
+      { "type": "linkedin", "url": "https://linkedin.com/in/zhexianzhou/" },
+      { "type": "github", "url": "https://github.com/JakoError" },
+      { "type": "globe", "url": "https://jakoerror.github.io" }
+    ]
+  },
+  {
+    "name": "Alejandro Miranda",
+    "memberType": "PhD",
+    "currentMember": "false",
+    "displayed": "true",
+    "role": "Vision",
+    "position": "MS ECE",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/Alejandro Miranda.jpg",
+    "social": [
+      { "type": "linkedin", "url": "www.linkedin.com/in/alejandroamiranda" }
+    ]
+  },
+  {
+    "name": "Swastik Mahapatra",
+    "memberType": "Master",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Autonomy, Systems",
+    "position": "MRSD",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/Swastik_Mahapatra.jpg",
+    "social": [
+      { "type": "globe", "url": "https://www.swastikmahapatra.com/" },
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/swastikmahapatra/" },
+      { "type": "github", "url": "https://github.com/swastikmhptr" }
+    ]
+  },
+  {
+    "name": "Andrew Porco",
+    "memberType": "Undergrad",
+    "currentMember": "false",
+    "displayed": "true",
+    "role": "Hardware Development",
+    "position": "Undergrad ME",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/andrew_porco.jpg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/andrew-porco/" }
+    ]
+  },
+  {
+    "name": "Diya Nerukar",
+    "memberType": "Undergrad",
+    "currentMember": "false",
+    "displayed": "true",
+    "role": "Hardware Development",
+    "position": "Undergrad ME",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/diya_nerukar.jpg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/diya-nerurkar/" }
+    ]
+  },
+  {
+    "name": "Varun Bhat",
+    "memberType": "Undergrad",
+    "currentMember": "false",
+    "displayed": "true",
+    "role": "Sensor Pack",
+    "position": "Undergrad ECE",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/Varun Bhat.jpeg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/varun-bhat-1549a2343/" }
+    ]
+  },
+  {
+    "name": "Shinya Tanaka",
+    "memberType": "Sponsor",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "",
+    "position": "",
+    "affiliation": "Denso",
+    "image": "assets/shinya-tanaka-denso.jpeg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/shinya-tanaka-715068336/" }
+    ]
+  },
+  {
+    "name": "Shawn Hunt",
+    "memberType": "Sponsor",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "",
+    "position": "",
+    "affiliation": "Denso",
+    "image": "assets/shawn-hunt-denso.jpeg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/shawn-hunt-8995b9374/" }
+    ]
+  },
+  {
+    "name": "Jay Gloomis",
+    "memberType": "Sponsor",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "",
+    "position": "",
+    "affiliation": "Denso",
+    "image": "assets/jay-gloomis-denso.jpeg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/jay-gloomis-6652728/" }
+    ]
+  },
+  {
+    "name": "Josh Pletz",
+    "memberType": "Scientist",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "",
+    "position": "",
+    "affiliation": "Lockheed Martin",
+    "image": "assets/placeholder.jpg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/josh-pletz-79734356/" }
+    ]
+  },
+  {
+    "name": "Christina Martinez",
+    "memberType": "Scientist",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "",
+    "position": "",
+    "affiliation": "Lockheed Martin",
+    "image": "assets/placeholder.jpg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/christina-martinez-7a076727/" }
+    ]
+  },
+  {
+    "name": "Robert",
+    "memberType": "Sponsor",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "",
+    "position": "",
+    "affiliation": "Figure8",
+    "image": "assets/placeholder.jpg",
+    "social": [
+      { "type": "linkedin", "url": "#" }
+    ]
+  },
+  {
+    "name": "Scott F. Swilley",
+    "memberType": "Sponsor",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "",
+    "position": "",
+    "affiliation": "",
+    "image": "assets/placeholder.jpg",
+    "social": [
+      { "type": "linkedin", "url": "#" }
+    ]
+  },
+  {
+    "name": "Vinay",
+    "memberType": "Sponsor",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "",
+    "position": "",
+    "affiliation": "Figure8",
+    "image": "assets/placeholder.jpg",
+    "social": [
+      { "type": "linkedin", "url": "#" }
+    ]
+  }
+]
