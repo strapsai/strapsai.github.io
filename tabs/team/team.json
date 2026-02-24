@@ -390,6 +390,33 @@
     ]
   },
   {
+    "name": "Sarah Pendhari",
+    "memberType": "Master",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Vision",
+    "position": "MSCV",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/Sarah Pendhari.jpg",
+    "social": [
+      { "type": "globe", "url": "https://sarahpendhari.github.io/SarahPendhari/" },
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/sarah-pendhari/" }
+    ]
+  },
+  {
+    "name": "Shruti Jain",
+    "memberType": "Master",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Vision",
+    "position": "MSCV",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/Shruti Jain.jpg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/swastikmahapatra/" }
+    ]
+  },
+  {
     "name": "Andrew Porco",
     "memberType": "Undergrad",
     "currentMember": "false",
