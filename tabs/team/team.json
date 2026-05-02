@@ -211,6 +211,19 @@
     ]
   },
   {
+    "name": "Dinesh Varun Shankar K",
+    "memberType": "Master",
+    "currentMember": "true",
+    "displayed": "true",
+    "role": "Perception & Autonomy",
+    "position": "MSME Research Student",
+    "affiliation": "Carnegie Mellon University",
+    "image": "assets/dinesh_varun_shankar.jpg",
+    "social": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/dineshvarunshankar/" }
+    ] 
+  },
+  {
     "name": "Merritt Kowaleski",
     "memberType": "Staff",
     "currentMember": "true",
