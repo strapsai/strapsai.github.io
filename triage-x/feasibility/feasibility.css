@@ -194,6 +194,48 @@
     margin-bottom: 16px;
 }
 
+/* Embedded video.
+   Mirrors the .challenge-video pattern in style.css: padding-bottom holds a
+   16:9 box and the iframe is absolutely positioned to fill it, so the player
+   scales with the card instead of overflowing it. */
+.feas-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+.feas-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--dark-camel);
+    border-radius: 6px;
+}
+
+.feas-video-caption {
+    color: var(--light-camel);
+    font-size: 0.82rem;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* A card carrying a player spans two columns where the grid has room, so the
+   video is large enough to read. Falls back to a single column below. */
+@media (min-width: 1024px) {
+    .feas-card.has-video {
+        grid-column: span 2;
+    }
+}
+
 /* Evidence list */
 .evidence-list {
     list-style: none;
