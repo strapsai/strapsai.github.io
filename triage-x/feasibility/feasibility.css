@@ -1,0 +1,276 @@
+/* TRIAGE-X Feasibility Evidence page
+   Uses the theme variables from ../../style.css (--medic-red, --army-camel,
+   --dark-camel, --light-camel, --dark-bg, --light-text). */
+
+/* Header */
+.feas-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
+                url('../../assets/backgrounds/plane_crash_2K.jpg') center/cover no-repeat;
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px; /* account for fixed nav */
+    position: relative;
+    overflow: hidden;
+}
+
+.feas-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, transparent 20%, rgba(71, 68, 47, 0.4) 70%);
+    z-index: 1;
+}
+
+.feas-header .header-content {
+    text-align: center;
+    max-width: 820px;
+    padding: 0 20px 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.feas-header .header-content h1 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.feas-header .header-content p {
+    color: #fff;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid var(--medic-red);
+}
+
+/* Scope notice */
+.feas-notice-section {
+    background-color: var(--dark-bg);
+    padding: 60px 0 10px;
+}
+
+.feas-notice {
+    border: 1px solid var(--dark-camel);
+    border-left: 4px solid var(--medic-red);
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.18);
+    padding: 25px 30px;
+}
+
+.feas-notice h2 {
+    color: var(--light-text);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.feas-notice p {
+    color: var(--light-text);
+    line-height: 1.65;
+    margin-bottom: 12px;
+    font-size: 1.02rem;
+}
+
+.feas-notice a {
+    color: var(--medic-red);
+    text-decoration: none;
+}
+
+.feas-notice a:hover {
+    text-decoration: underline;
+}
+
+.feas-updated {
+    color: var(--light-camel);
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+/* Evidence grid */
+.feas-evidence-section {
+    background-color: var(--dark-bg);
+    padding: 60px 0 80px;
+}
+
+.feas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.feas-card {
+    background-color: rgba(0, 0, 0, 0.22);
+    border: 1px solid var(--dark-camel);
+    border-radius: 8px;
+    padding: 22px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feas-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+.feas-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.feas-card-id {
+    display: inline-block;
+    min-width: 34px;
+    text-align: center;
+    padding: 3px 8px;
+    background-color: var(--medic-red);
+    color: var(--light-text);
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.feas-status {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+.feas-status.ready {
+    color: #d6f5d6;
+    border-color: #6aa84f;
+    background-color: rgba(106, 168, 79, 0.18);
+}
+
+.feas-status.pending {
+    color: var(--light-camel);
+    border-color: var(--dark-camel);
+    background-color: rgba(154, 142, 111, 0.15);
+}
+
+.feas-card h3 {
+    color: var(--light-text);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    line-height: 1.35;
+}
+
+.feas-criterion {
+    color: var(--light-camel);
+    font-size: 0.9rem;
+    line-height: 1.55;
+    font-style: italic;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(154, 142, 111, 0.35);
+}
+
+.feas-claim {
+    color: var(--light-text);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+/* Evidence list */
+.evidence-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: auto;
+}
+
+.evidence-item {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 0;
+    border-top: 1px solid rgba(154, 142, 111, 0.22);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.evidence-item a {
+    color: var(--light-text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--medic-red);
+    transition: color 0.2s ease;
+}
+
+.evidence-item a:hover {
+    color: var(--medic-red);
+}
+
+.evidence-item.placeholder {
+    color: var(--light-camel);
+    font-style: italic;
+    opacity: 0.75;
+}
+
+.evidence-type {
+    flex-shrink: 0;
+    font-size: 0.68rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 2px 7px;
+    border-radius: 3px;
+    color: var(--dark-bg);
+    background-color: var(--light-camel);
+}
+
+.evidence-type.doc { background-color: var(--light-camel); }
+.evidence-type.img { background-color: var(--army-camel); }
+.evidence-type.vid { background-color: var(--medic-red); color: var(--light-text); }
+
+.evidence-note {
+    color: var(--light-camel);
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .feas-header {
+        min-height: 280px;
+    }
+
+    .feas-header .header-content h1 {
+        font-size: 2.1rem;
+    }
+
+    .feas-header .header-content p {
+        font-size: 1rem;
+    }
+
+    .feas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feas-notice {
+        padding: 20px;
+    }
+}
