@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | CHIRON</title>
+
+    <!--
+      GitHub Pages serves this file for any missing path on this domain, rendered
+      AT the requested URL (e.g. /triage-x/typo). Every reference below is therefore
+      root-absolute ("/style.css", not "../../style.css") - a relative path would
+      resolve against the missing directory and 404 in turn.
+
+      No burger menu and no script.js here on purpose: script.js expects the
+      loading-screen elements from index.html, so an error page should not depend
+      on it. Keep this page self-contained.
+    -->
+
+    <link rel="icon" href="/assets/logo/chiron/icon/chiron-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/logo/chiron/icon/chiron-icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        /* Self-contained styles for the error page. Theme variables come from style.css. */
+        body {
+            height: auto;
+            min-height: 100vh;
+        }
+
+        .nf-wrap {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nf-bar {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            padding: 18px 28px;
+            border-bottom: 1px solid var(--dark-camel);
+            background-color: rgba(0, 0, 0, 0.25);
+        }
+
+        .nf-bar img {
+            height: 34px;
+            width: auto;
+        }
+
+        .nf-bar-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nf-bar-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 7px 14px;
+            border-radius: 20px;
+            background-color: var(--army-camel);
+            color: var(--dark-bg);
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .nf-bar-links a:hover {
+            background-color: var(--medic-red);
+            color: var(--light-text);
+            transform: translateY(-1px);
+        }
+
+        .nf-main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 70px 20px;
+        }
+
+        .nf-content {
+            max-width: 680px;
+            text-align: center;
+        }
+
+        .nf-code {
+            font-size: 5.5rem;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--medic-red);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .nf-content h1 {
+            color: var(--light-text);
+            font-size: 1.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+        }
+
+        .nf-rule {
+            height: 3px;
+            width: 60px;
+            background-color: var(--medic-red);
+            margin: 0 auto 24px;
+        }
+
+        .nf-content p {
+            color: var(--light-text);
+            font-size: 1.05rem;
+            line-height: 1.65;
+            margin-bottom: 14px;
+        }
+
+        .nf-path {
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            color: var(--light-camel);
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--dark-camel);
+            border-radius: 4px;
+            padding: 8px 12px;
+            display: inline-block;
+            margin-bottom: 20px;
+            word-break: break-all;
+        }
+
+        .nf-actions {
+            margin-top: 28px;
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nf-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--medic-red);
+            color: var(--light-text);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .nf-btn:hover {
+            background-color: #cc2828;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 50, 50, 0.3);
+        }
+
+        .nf-btn.secondary {
+            background-color: transparent;
+            border: 1px solid var(--dark-camel);
+            color: var(--light-text);
+        }
+
+        .nf-btn.secondary:hover {
+            background-color: rgba(154, 142, 111, 0.2);
+            box-shadow: none;
+        }
+
+        .nf-foot {
+            text-align: center;
+            padding: 22px 20px;
+            border-top: 1px solid var(--dark-camel);
+            color: var(--light-camel);
+            font-size: 0.82rem;
+        }
+
+        .nf-foot a {
+            color: var(--medic-red);
+            text-decoration: none;
+        }
+
+        .nf-foot a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .nf-bar {
+                padding: 14px 18px;
+                justify-content: center;
+            }
+
+            .nf-code {
+                font-size: 3.6rem;
+            }
+
+            .nf-content h1 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nf-wrap">
+        <div class="nf-bar">
+            <a href="/"><img src="/assets/logo/chiron/png/CMU_TeamChiron_RedWht.png" alt="Team Chiron"></a>
+            <div class="nf-bar-links">
+                <a href="/">About Us</a>
+                <a href="/tabs/tech_and_research/tech_and_research.html">Tech &amp; Research</a>
+                <a href="/tabs/team/team.html">Team</a>
+                <a href="/tabs/robots/robots.html">Robots</a>
+                <a href="/tabs/sponsors/sponsor.html">Sponsor</a>
+            </div>
+        </div>
+
+        <main class="nf-main">
+            <div class="nf-content">
+                <div class="nf-code">404</div>
+                <h1>Page Not Found</h1>
+                <div class="nf-rule"></div>
+
+                <p>The page you requested does not exist on this site.</p>
+
+                <p class="nf-path" id="nf-requested-path"></p>
+
+                <p>
+                    If you reached this page from a document or a shared link, the address may be
+                    mistyped or the material may have moved. Please check the address, or contact us
+                    and we will point you to the right place.
+                </p>
+
+                <div class="nf-actions">
+                    <a href="/" class="nf-btn">Return to Home</a>
+                    <a href="mailto:darpa-triage@cmu.edu?subject=Broken%20link%20on%20teamchiron.ai" class="nf-btn secondary">Report a Broken Link</a>
+                </div>
+            </div>
+        </main>
+
+        <div class="nf-foot">
+            <p>&copy; 2026 Team Chiron. All rights reserved. &mdash;
+               <a href="mailto:darpa-triage@cmu.edu">darpa-triage@cmu.edu</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Show the address that was actually requested, so a mistyped link in a
+        // printed document is easy to spot. textContent, never innerHTML: the path
+        // is attacker-controlled and must never be parsed as markup.
+        (function () {
+            var el = document.getElementById('nf-requested-path');
+            if (!el) { return; }
+            try {
+                el.textContent = window.location.pathname;
+            } catch (e) {
+                el.style.display = 'none';
+            }
+        })();
+    </script>
+</body>
+</html>
