@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIAGE-X Feasibility Evidence | CHIRON</title>
+
+    <!-- Evidence page: reachable by direct link, deliberately kept out of search engines
+         and out of the site navigation. Do not add a link to this page from index.html. -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Simple Favicon -->
+    <link rel="icon" href="../../assets/logo/chiron/icon/chiron-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/logo/chiron/icon/chiron-icon.png" type="image/x-icon">
+
+    <!-- Main stylesheet reference -->
+    <link rel="stylesheet" href="../../style.css">
+
+    <!-- Feasibility page specific stylesheet -->
+    <link rel="stylesheet" href="feasibility.css">
+</head>
+<body>
+    <!-- Main Content -->
+    <div id="main-content">
+        <nav class="button-nav">
+            <div class="nav-logo">
+                <img src="../../assets/logo/chiron/png/CMU_TeamChiron_RedWht.png" alt="Chiron">
+            </div>
+            <div class="nav-links">
+                <a href="../../index.html" class="nav-button">About Us</a>
+                <a href="../../tabs/tech_and_research/tech_and_research.html" class="nav-button">Tech &amp; Research</a>
+                <a href="../../tabs/team/team.html" class="nav-button">Team</a>
+                <a href="../../tabs/robots/robots.html" class="nav-button">Robots</a>
+                <a href="../../index.html#news" class="nav-button">News</a>
+                <a href="../../tabs/sponsors/sponsor.html" class="nav-button">Sponsor</a>
+            </div>
+            <div class="burger-menu">
+                <div class="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <img src="../../assets/logo/chiron/png/CMU_TeamChiron_RedWht.png" alt="Chiron" class="mobile-logo">
+                <div class="close-menu">×</div>
+            </div>
+            <div class="mobile-menu-links">
+                <a href="../../index.html" class="mobile-nav-button">About Us</a>
+                <a href="../../tabs/tech_and_research/tech_and_research.html" class="mobile-nav-button">Tech &amp; Research</a>
+                <a href="../../tabs/team/team.html" class="mobile-nav-button">Team</a>
+                <a href="../../tabs/robots/robots.html" class="mobile-nav-button">Robots</a>
+                <a href="../../index.html#news" class="mobile-nav-button">News</a>
+                <a href="../../tabs/sponsors/sponsor.html" class="mobile-nav-button">Sponsor</a>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <section class="feas-header">
+            <div class="header-content">
+                <h1>Feasibility Evidence</h1>
+                <p>Supporting materials for autonomous casualty triage capability demonstrated by
+                   CMU Team Chiron in the DARPA Triage Challenge.</p>
+            </div>
+        </section>
+
+        <!-- Scope notice -->
+        <section class="feas-notice-section">
+            <div class="section-container">
+                <div class="feas-notice">
+                    <h2>About this page</h2>
+                    <p>
+                        This page collects publicly releasable summaries, illustrations and video of
+                        capability demonstrated by CMU Team Chiron. Each entry links to a short document,
+                        an illustration, or a video.
+                    </p>
+                    <p>
+                        <strong>Detailed technical reports and program data are not hosted here.</strong>
+                        Distribution-limited material, raw datasets and scored-run records are available to
+                        authorised reviewers on request &mdash; please contact
+                        <a href="mailto:darpa-triage@cmu.edu">darpa-triage@cmu.edu</a>.
+                    </p>
+                    <p class="feas-updated">
+                        <!-- MAINTAINERS: update this date whenever evidence is added or changed. -->
+                        Last updated: <time datetime="2026-11-24">24 November 2026</time>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--
+        ============================================================================
+        MAINTAINER NOTES  (HTML comments; not rendered)
+        ============================================================================
+        Nine cards below, C1-C9, matching the nine rows of the feasibility table in
+        the proposal. Keep the ids stable: the proposal cites them as "Report C1" etc.
+
+        To populate a card, replace its <ul class="evidence-list"> placeholder items.
+        Three item types are styled; copy the shape you need:
+
+          <li class="evidence-item">
+            <span class="evidence-type doc">PDF</span>
+            <a href="assets/c1-localization-summary.pdf" target="_blank" rel="noopener">
+              Casualty localization summary</a>
+            <span class="evidence-note">2 pp &middot; 0.4 MB</span>
+          </li>
+
+          <li class="evidence-item">
+            <span class="evidence-type img">Image</span>
+            <a href="assets/c1-map-projection.png" target="_blank" rel="noopener">
+              Map-projected detections, August 2026</a>
+            <span class="evidence-note">Figure</span>
+          </li>
+
+          <li class="evidence-item">
+            <span class="evidence-type vid">Video</span>
+            <a href="https://www.youtube.com/watch?v=REPLACE" target="_blank" rel="noopener">
+              Drone survey and detection run</a>
+            <span class="evidence-note">Unlisted &middot; 2:15</span>
+          </li>
+
+        Put PDFs and images in triage-x/feasibility/assets/.
+        Videos stay on YouTube as unlisted; do not upload video files to the repo.
+
+        Status badge on each card: change the class and the text together.
+          <span class="feas-status ready">Evidence posted</span>
+          <span class="feas-status pending">Evidence pending</span>
+
+        Reminder: everything linked from this page is world-readable by anyone who has
+        the URL. "Unlisted" on YouTube is not access control. Do not post anything
+        carrying a distribution limitation.
+        ============================================================================
+        -->
+
+        <!-- Evidence cards -->
+        <section class="feas-evidence-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Capability Evidence</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="feas-grid">
+
+                    <!-- C1 -->
+                    <article class="feas-card" id="c1">
+                        <div class="feas-card-head">
+                            <span class="feas-card-id">C1</span>
+                            <span class="feas-status pending">Evidence pending</span>
+                        </div>
+                        <h3>Casualty detection and localization</h3>
+                        <p class="feas-criterion">Autonomously find and localize casualties and report
+                           their location to within 2&nbsp;m.</p>
+                        <p class="feas-claim">
+                            <!-- One or two sentences, plain language. -->
+                            [Summary to be added.]
+                        </p>
+                        <ul class="evidence-list">
+                            <li class="evidence-item placeholder">Evidence to be added.</li>
+                        </ul>
+                    </article>
+
+                    <!-- C2 -->
+                    <article class="feas-card" id="c2">
+                        <div class="feas-card-head">
+                            <span class="feas-card-id">C2</span>
+                            <span class="feas-status pending">Evidence pending</span>
+                        </div>
+                        <h3>Trauma assessment and triage category</h3>
+                        <p class="feas-criterion">Assess trauma patterns and assign a trauma triage
+                           category.</p>
+                        <p class="feas-claim">[Summary to be added.]</p>
+                        <ul class="evidence-list">
+                            <li class="evidence-item placeholder">Evidence to be added.</li>
+                        </ul>
+                    </article>
+
+                    <!-- C3 -->
+                    <article class="feas-card" id="c3">
+                        <div class="feas-card-head">
+                            <span class="feas-card-id">C3</span>
+                            <span class="feas-status pending">Evidence pending</span>
+                        </div>
+                        <h3>Standoff vital signs</h3>
+                        <p class="feas-criterion">Perform accurate standoff vital-signs assessment,
+                           including at minimum heart rate and respiratory rate.</p>
+                        <p class="feas-claim">[Summary to be added.]</p>
+                        <ul class="evidence-list">
+                            <li class="evidence-item placeholder">Evidence to be added.</li>
+                        </ul>
+                    </article>
+
+                    <!-- C4 -->
+                    <article class="feas-card" id="c4">
+                        <div class="feas-card-head">
+                            <span class="feas-card-id">C4</span>
+                            <span class="feas-status pending">Evidence pending</span>
+                        </div>
+                        <h3>Scale: 20 or more casualties</h3>
+                        <p class="feas-criterion">Operate at scale &mdash; at least 20 casualties in a
+                           single scenario.</p>
+                        <p class="feas-claim">[Summary to be added.]</p>
+                        <ul class="evidence-list">
+                            <li class="evidence-item placeholder">Evidence to be added.</li>
+                        </ul>
+                    </article>
+
+                    <!-- C5 -->
+                    <article class="feas-card" id="c5">
+                        <div class="feas-card-head">
+                            <span class="feas-card-id">C5</span>
+                            <span class="feas-status pending">Evidence pending</span>
+                        </div>
+                        <h3>Assessment time per casualty</h3>
+                        <p class="feas-criterion">Perform assessment in under 90 seconds for each
+                           casualty.</p>
+                        <p class="feas-claim">[Summary to be added.]</p>
+                        <ul class="evidence-list">
+                            <li class="evidence-item placeholder">Evidence to be added.</li>
+                        </ul>
+                    </article>
+
+                    <!-- C6 -->
+                    <article class="feas-card" id="c6">
+                        <div class="feas-card-head">
+                            <span class="feas-card-id">C6</span>
+                            <span class="feas-status pending">Evidence pending</span>
+                        </div>
+                        <h3>Area coverage on one battery</h3>
+                        <p class="feas-criterion">Survey a 30,000&nbsp;sq&nbsp;ft area without a battery
+                           change.</p>
+                        <p class="feas-claim">[Summary to be added.]</p>
+                        <ul class="evidence-list">
+                            <li class="evidence-item placeholder">Evidence to be added.</li>
+                        </ul>
+                    </article>
+
+                    <!-- C7 -->
+                    <article class="feas-card" id="c7">
+                        <div class="feas-card-head">
+                            <span class="feas-card-id">C7</span>
+                            <span class="feas-status pending">Evidence pending</span>
+                        </div>
+                        <h3>Diverse, realistic environments</h3>
+                        <p class="feas-criterion">Operate indoors and outdoors, daytime and nighttime;
+                           adverse weather (rain, smoke) desirable but not required.</p>
+                        <p class="feas-claim">[Summary to be added.]</p>
+                        <ul class="evidence-list">
+                            <li class="evidence-item placeholder">Evidence to be added.</li>
+                        </ul>
+                    </article>
+
+                    <!-- C8 -->
+                    <article class="feas-card" id="c8">
+                        <div class="feas-card-head">
+                            <span class="feas-card-id">C8</span>
+                            <span class="feas-status pending">Evidence pending</span>
+                        </div>
+                        <h3>Human-interpretable graphical output</h3>
+                        <p class="feas-criterion">Produce a human-interpretable output through a
+                           graphical interface conveying casualty locations and priorities of care.</p>
+                        <p class="feas-claim">[Summary to be added.]</p>
+                        <ul class="evidence-list">
+                            <li class="evidence-item placeholder">Evidence to be added.</li>
+                        </ul>
+                    </article>
+
+                    <!-- C9 -->
+                    <article class="feas-card" id="c9">
+                        <div class="feas-card-head">
+                            <span class="feas-card-id">C9</span>
+                            <span class="feas-status pending">Evidence pending</span>
+                        </div>
+                        <h3>Portability</h3>
+                        <p class="feas-criterion">All components easily transported by a vehicle or
+                           drone.</p>
+                        <p class="feas-claim">[Summary to be added.]</p>
+                        <ul class="evidence-list">
+                            <li class="evidence-item placeholder">Evidence to be added.</li>
+                        </ul>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer with contact links and information -->
+        <footer class="contact-footer">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Contact Us</h3>
+                    <div class="info-details">
+                        <p>Robotics Institute, Carnegie Mellon University</p>
+                        <p>1723 Murray Ave, Pittsburgh, PA 15217</p>
+                        <p>Email: <a href="mailto:darpa-triage@cmu.edu">darpa-triage@cmu.edu</a></p>
+                        <a href="mailto:darpa-triage@cmu.edu">Email Us</a>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2026 Team Chiron. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../../script.js"></script>
+</body>
+</html>
