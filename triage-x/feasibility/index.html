@@ -76,7 +76,8 @@
                     <p>
                         This page collects publicly releasable summaries, illustrations and video of
                         capability demonstrated by CMU Team Chiron. Each entry links to a short document,
-                        an illustration, or a video.
+                        an illustration, or a video. Further material is published here as it is
+                        prepared for release.
                     </p>
                     <p>
                         <strong>Detailed technical reports and program data are not hosted here.</strong>
@@ -96,8 +97,18 @@
         ============================================================================
         MAINTAINER NOTES  (HTML comments; not rendered)
         ============================================================================
-        Nine cards below, C1-C9, matching the nine rows of the feasibility table in
-        the proposal. Keep the ids stable: the proposal cites them as "Report C1" etc.
+        Card ids match the nine rows of the feasibility table in the proposal, which
+        cites them as "Report C1" ... "Report C9". Keep the ids stable; do not
+        renumber to close the gaps, or the mapping to the table breaks.
+
+        Only cards with evidence are published. C2, C4, C5, C6 and C9 were removed
+        on 2026-11-24 rather than shown as empty, so a reviewer arriving from the
+        proposal sees evidence and not a list of gaps.
+
+        WHAT EACH REMOVED CARD STILL NEEDS is recorded in the yaoyu_assistant
+        work-log, work/triage-x/2026-11-24-feasibility-evidence-status.md. That note
+        is the list; this file no longer carries it. To restore a card, recover its
+        markup from git history and keep its original id.
 
         To populate a card, replace its <ul class="evidence-list"> placeholder items.
         Three item types are styled; copy the shape you need:
@@ -192,21 +203,6 @@
                         </ul>
                     </article>
 
-                    <!-- C2 -->
-                    <article class="feas-card" id="c2">
-                        <div class="feas-card-head">
-                            <span class="feas-card-id">C2</span>
-                            <span class="feas-status pending">Evidence pending</span>
-                        </div>
-                        <h3>Trauma assessment and triage category</h3>
-                        <p class="feas-criterion">Assess trauma patterns and assign a trauma triage
-                           category.</p>
-                        <p class="feas-claim">[Summary to be added.]</p>
-                        <ul class="evidence-list">
-                            <li class="evidence-item placeholder">Evidence to be added.</li>
-                        </ul>
-                    </article>
-
                     <!-- C3 -->
                     <article class="feas-card" id="c3">
                         <div class="feas-card-head">
@@ -234,51 +230,6 @@
                                     autonomous quadruped robots</a>
                                 <span class="evidence-note">Preprint &middot; 12 pp &middot; 2.9&nbsp;MB</span>
                             </li>
-                        </ul>
-                    </article>
-
-                    <!-- C4 -->
-                    <article class="feas-card" id="c4">
-                        <div class="feas-card-head">
-                            <span class="feas-card-id">C4</span>
-                            <span class="feas-status pending">Evidence pending</span>
-                        </div>
-                        <h3>Scale: 20 or more casualties</h3>
-                        <p class="feas-criterion">Operate at scale &mdash; at least 20 casualties in a
-                           single scenario.</p>
-                        <p class="feas-claim">[Summary to be added.]</p>
-                        <ul class="evidence-list">
-                            <li class="evidence-item placeholder">Evidence to be added.</li>
-                        </ul>
-                    </article>
-
-                    <!-- C5 -->
-                    <article class="feas-card" id="c5">
-                        <div class="feas-card-head">
-                            <span class="feas-card-id">C5</span>
-                            <span class="feas-status pending">Evidence pending</span>
-                        </div>
-                        <h3>Assessment time per casualty</h3>
-                        <p class="feas-criterion">Perform assessment in under 90 seconds for each
-                           casualty.</p>
-                        <p class="feas-claim">[Summary to be added.]</p>
-                        <ul class="evidence-list">
-                            <li class="evidence-item placeholder">Evidence to be added.</li>
-                        </ul>
-                    </article>
-
-                    <!-- C6 -->
-                    <article class="feas-card" id="c6">
-                        <div class="feas-card-head">
-                            <span class="feas-card-id">C6</span>
-                            <span class="feas-status pending">Evidence pending</span>
-                        </div>
-                        <h3>Area coverage on one battery</h3>
-                        <p class="feas-criterion">Survey a 30,000&nbsp;sq&nbsp;ft area without a battery
-                           change.</p>
-                        <p class="feas-claim">[Summary to be added.]</p>
-                        <ul class="evidence-list">
-                            <li class="evidence-item placeholder">Evidence to be added.</li>
                         </ul>
                     </article>
 
@@ -364,21 +315,6 @@
                                     Prototype of ToC (Track over Chiron) app</a>
                                 <span class="evidence-note">Unlisted &middot; 1:51 &middot; opens on YouTube</span>
                             </li>
-                        </ul>
-                    </article>
-
-                    <!-- C9 -->
-                    <article class="feas-card" id="c9">
-                        <div class="feas-card-head">
-                            <span class="feas-card-id">C9</span>
-                            <span class="feas-status pending">Evidence pending</span>
-                        </div>
-                        <h3>Portability</h3>
-                        <p class="feas-criterion">All components easily transported by a vehicle or
-                           drone.</p>
-                        <p class="feas-claim">[Summary to be added.]</p>
-                        <ul class="evidence-list">
-                            <li class="evidence-item placeholder">Evidence to be added.</li>
                         </ul>
                     </article>
 
